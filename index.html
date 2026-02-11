@@ -3,9 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
     <title>💥 PQQ MUSIC</title>
     <style>
         body {
@@ -15,6 +12,7 @@
             justify-content: center;
             padding-top: 50px;
             margin: 0;
+            padding-bottom: 50px; /* Thêm khoảng trống dưới cùng */
         }
         .container {
             background: white;
@@ -27,13 +25,44 @@
         h1 {
             text-align: center;
             color: #333;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
+        
+        /* PHẦN ĐIỀU KHIỂN MỚI THÊM */
+        .controls-area {
+            background: #eef2f3;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border: 1px solid #ddd;
+        }
+        .control-item {
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            color: #2c3e50;
+            cursor: pointer;
+        }
+        .control-item input {
+            margin-right: 8px;
+            transform: scale(1.3);
+            cursor: pointer;
+        }
+
         .track {
             display: flex;
             flex-direction: column;
             padding: 15px;
             border-bottom: 1px solid #eee;
+            transition: background 0.3s;
+        }
+        /* Hiệu ứng khi bài hát đang chạy */
+        .track.active-track {
+            background-color: #e8f8f5;
+            border-left: 5px solid #2ecc71;
         }
         .track:last-child {
             border-bottom: none;
@@ -48,7 +77,6 @@
             width: 100%;
             outline: none;
         }
-        /* Trang trí thanh audio (tùy chỉnh cho Chrome/Safari) */
         audio::-webkit-media-controls-panel {
             background-color: #f1f3f4;
         }
@@ -59,60 +87,124 @@
     <div class="container">
         <h1>💥 PQQ MUSIC</h1>
         
+        <div class="controls-area">
+            <label class="control-item">
+                <input type="checkbox" id="autoNextCheck" checked> 
+                Tự động chuyển bài
+            </label>
+            <label class="control-item">
+                <input type="checkbox" id="shuffleCheck"> 
+                Phát ngẫu nhiên
+            </label>
+        </div>
+
         <div class="track">
             <div class="track-title">1. Khúc Xuân Đồng Môn</div>
             <audio controls>
                 <source src="khucxuandongmon.mp3" type="audio/mpeg">
-                Trình duyệt của bạn không hỗ trợ phát nhạc.
             </audio>
         </div>
+
         <div class="track">
-         <div class="track-title">2. Ánh Xuân Phật Quang 2</div>
+            <div class="track-title">2. Ánh Xuân Phật Quang 2</div>
             <audio controls>
                 <source src="ÁNH XUÂN PHẬT QUANG 2.mp3" type="audio/mpeg">
-                Trình duyệt của bạn không hỗ trợ phát nhạc.
             </audio>
-       </div>
-
-        <div class="track">
-         <div class="track-title">3. Ánh Xuân Phật Quang </div>
-            <audio controls>
-                <source src="3ÁNH XUÂN PHẬT QUANG.mp3" type="audio/mpeg">
-                Trình duyệt của bạn không hỗ trợ phát nhạc.
-            </audio>
-       </div>
-
-         <div class="track">
-         <div class="track-title">4. Xuân Về Trong Mắt Người Thân </div>
-            <audio controls>
-                <source src="4Xuân Về Trong Ánh Mắt Người Thân.mp3" type="audio/mpeg">
-                Trình duyệt của bạn không hỗ trợ phát nhạc.
-            </audio>
-       </div>
-
-         <div class="track">
-         <div class="track-title">5. Một Chén Trà Một Đời An </div>
-            <audio controls>
-                <source src="5Một Chén Trà Một Đời An.mp3" type="audio/mpeg">
-                Trình duyệt của bạn không hỗ trợ phát nhạc.
-            </audio>
-       </div>
-
-      <div class="track">
-         <div class="track-title">6. HỒN VÕ SÀI GÒN – THÀNH PHỐ HỒ CHÍ MINH 2 </div>
-            <audio controls>
-                <source src="6HỒN VÕ SÀI GÒN – THÀNH PHỐ HỒ CHÍ MINH 2.mp3" type="audio/mpeg">
-                Trình duyệt của bạn không hỗ trợ phát nhạc.
-            </audio>
-       </div>
-        
         </div>
 
+        <div class="track">
+            <div class="track-title">3. Ánh Xuân Phật Quang</div>
+            <audio controls>
+                <source src="3ÁNH XUÂN PHẬT QUANG.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+        <div class="track">
+            <div class="track-title">4. Xuân Về Trong Mắt Người Thân</div>
+            <audio controls>
+                <source src="4Xuân Về Trong Ánh Mắt Người Thân.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+        <div class="track">
+            <div class="track-title">5. Một Chén Trà Một Đời An</div>
+            <audio controls>
+                <source src="5Một Chén Trà Một Đời An.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+        <div class="track">
+            <div class="track-title">6. HỒN VÕ SÀI GÒN – TP.HCM 2</div>
+            <audio controls>
+                <source src="6HỒN VÕ SÀI GÒN – THÀNH PHỐ HỒ CHÍ MINH 2.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        
+    </div>
+
+    <script>
+        // Lấy tất cả thẻ audio và thẻ bao quanh (track)
+        const allAudios = document.querySelectorAll('audio');
+        const allTracks = document.querySelectorAll('.track');
+        
+        const autoNextCheck = document.getElementById('autoNextCheck');
+        const shuffleCheck = document.getElementById('shuffleCheck');
+
+        // Hàm tắt tất cả các bài đang phát (trừ bài hiện tại)
+        function pauseOthers(currentAudio) {
+            allAudios.forEach((audio, index) => {
+                if (audio !== currentAudio) {
+                    audio.pause();
+                    audio.currentTime = 0; // Tua về đầu
+                    allTracks[index].classList.remove('active-track'); // Bỏ màu nền
+                }
+            });
+        }
+
+        // Hàm phát bài tiếp theo
+        function playNextSong(currentIndex) {
+            let nextIndex;
+
+            // Kiểm tra xem có đang bật chế độ Ngẫu nhiên không
+            if (shuffleCheck.checked) {
+                // Random một số khác với số hiện tại
+                do {
+                    nextIndex = Math.floor(Math.random() * allAudios.length);
+                } while (nextIndex === currentIndex && allAudios.length > 1);
+            } else {
+                // Chế độ tuần tự: Tăng index lên 1
+                nextIndex = currentIndex + 1;
+                // Nếu hết danh sách thì quay lại bài đầu tiên
+                if (nextIndex >= allAudios.length) {
+                    nextIndex = 0;
+                }
+            }
+
+            // Phát bài mới
+            const nextAudio = allAudios[nextIndex];
+            nextAudio.play();
+            // Cuộn màn hình tới bài đang hát (cho mượt)
+            allTracks[nextIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        // Gắn sự kiện cho từng bài hát
+        allAudios.forEach((audio, index) => {
+            
+            // 1. Khi bấm Play một bài
+            audio.addEventListener('play', () => {
+                pauseOthers(audio); // Tắt các bài khác
+                allTracks[index].classList.add('active-track'); // Đổi màu nền bài đang hát
+            });
+
+            // 2. Khi một bài hát kết thúc (Ended)
+            audio.addEventListener('ended', () => {
+                // Nếu chế độ "Tự động chuyển bài" được bật
+                if (autoNextCheck.checked) {
+                    playNextSong(index);
+                }
+            });
+        });
+    </script>
+
 </body>
-
 </html>
-
-
-
-
-
