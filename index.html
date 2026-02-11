@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuyển Tập Nhạc Của Thầy</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            width: 90%;
+            max-width: 600px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .track {
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .track:last-child {
+            border-bottom: none;
+        }
+        .track-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        audio {
+            width: 100%;
+            outline: none;
+        }
+        /* Trang trí thanh audio (tùy chỉnh cho Chrome/Safari) */
+        audio::-webkit-media-controls-panel {
+            background-color: #f1f3f4;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Âm Nhạc Phật Giáo & Đời Sống</h1>
+        
+        <div class="track">
+            <div class="track-title">1. Không Phụ Tâm Nguyện</div>
+            <audio controls>
+                <source src="music/track1.mp3" type="audio/mpeg">
+                Trình duyệt của bạn không hỗ trợ phát nhạc.
+            </audio>
+        </div>
+
+        </div>
+
+</body>
+</html>
