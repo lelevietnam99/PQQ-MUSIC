@@ -12,7 +12,7 @@
             justify-content: center;
             padding-top: 50px;
             margin: 0;
-            padding-bottom: 50px; /* Thêm khoảng trống dưới cùng */
+            padding-bottom: 50px;
         }
         .container {
             background: white;
@@ -28,7 +28,6 @@
             margin-bottom: 20px;
         }
         
-        /* PHẦN ĐIỀU KHIỂN MỚI THÊM */
         .controls-area {
             background: #eef2f3;
             padding: 15px;
@@ -59,7 +58,6 @@
             border-bottom: 1px solid #eee;
             transition: background 0.3s;
         }
-        /* Hiệu ứng khi bài hát đang chạy */
         .track.active-track {
             background-color: #e8f8f5;
             border-left: 5px solid #2ecc71;
@@ -76,9 +74,38 @@
         audio {
             width: 100%;
             outline: none;
+            margin-bottom: 10px; /* Thêm khoảng cách giữa audio và lời bài hát */
         }
         audio::-webkit-media-controls-panel {
             background-color: #f1f3f4;
+        }
+
+        /* PHẦN CSS CHO LYRIC MỚI THÊM */
+        .lyric-section {
+            margin-top: 5px;
+        }
+        .lyric-section summary {
+            font-size: 14px;
+            font-weight: 600;
+            color: #3498db;
+            cursor: pointer;
+            outline: none;
+            user-select: none;
+            transition: color 0.2s;
+        }
+        .lyric-section summary:hover {
+            color: #2980b9;
+        }
+        .lyric-content {
+            margin-top: 10px;
+            padding: 12px;
+            background-color: #fcfcfc;
+            border-left: 3px solid #3498db;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+            white-space: pre-line; /* Giúp giữ nguyên các lần xuống dòng khi dán text */
         }
     </style>
 </head>
@@ -101,8 +128,70 @@
         <div class="track">
             <div class="track-title">1. Khúc Xuân Đồng Môn</div>
             <audio controls>
-                <source src="khucxuandongmon.mp3" type="audio/mpeg">
+                <source src="1khucxuandongmon.mp3" type="audio/mpeg">
             </audio>
+            <details class="lyric-section">
+                <summary>👉 Xem lời bài hát</summary>
+                <div class="lyric-content">🌸 KHÚC XUÂN ĐỒNG MÔN 🌸
+
+Verse 1
+Xuân về trên mái võ đường xưa
+Trống xuân vang giữa gió mưa giao mùa
+Áo môn sinh còn thơm mùi nắng
+Một năm qua rèn chí, luyện tâm.
+Verse 2
+Huynh đệ ơi, tay nắm tay chào xuân
+Bao gian khó nay hóa ân cần
+Mồ hôi rơi thành hoa trên đất
+Nghĩa đồng môn bền chặt muôn phần.
+Pre-Chorus
+Con cúi đầu trước thềm năm mới
+Nghe tim mình lắng lại bình an
+Một nén hương lòng xin thắp sáng
+Đạo – Đời hòa quyện bước song hành.
+Chorus
+Xuân này con chúc huynh đệ an khang
+Tâm sáng – thân bền – chí vững vàng
+Dẫu đường đời muôn trùng sóng gió
+Vẫn một lòng giữ trọn đạo tâm.
+Xuân này con nguyện với trời cao
+Đạo pháp trường tồn, sáng mai sau
+Đất nước yên vui, dân no ấm
+Môn phái bền lâu, nghĩa đậm sâu.
+Verse 3
+Con là môn sinh giữa đời thường
+Học lễ – học võ – học yêu thương
+Mỗi thế đứng là rèn nhân cách
+Mỗi cú quyền giữ trọn quê hương.
+Verse 4
+Ngoài cổng võ đường là nhân thế
+Bao phận người còn lắm phong ba
+Con xin nguyện đem điều đã học
+Sống hiền lành, giúp đời nở hoa.
+Chorus 
+Xuân này con chúc huynh đệ an khang
+Tâm sáng – thân bền – chí vững vàng
+Dẫu đường đời muôn trùng sóng gió
+Vẫn một lòng giữ trọn đạo tâm.
+Xuân này con nguyện với trời cao
+Đạo pháp trường tồn, sáng mai sau
+Đất nước yên vui, dân no ấm
+Môn phái bền lâu, nghĩa đậm sâu.
+Bridge 
+Nguyện cho người trước, kẻ sau
+Biết sống tử tế, biết đau mà thương
+Nguyện cho thế giới thôi hận thù
+Lòng người gần lại, ánh sáng soi chung.
+Final Chorus 
+Xuân đến rồi, xuân của đồng môn
+Chung một niềm tin, một cội nguồn
+Từ võ đường nhỏ lan ra cuộc sống
+Gieo an vui cho khắp muôn phương.
+Xuân đến rồi, xin chắp tay nguyện
+Cho người – cho đạo – cho non sông
+Con chỉ là môn sinh bé nhỏ
+Xin sống trọn đời với chữ NHÂN</div>
+            </details>
         </div>
 
         <div class="track">
@@ -110,6 +199,70 @@
             <audio controls>
                 <source src="ÁNH XUÂN PHẬT QUANG 2.mp3" type="audio/mpeg">
             </audio>
+            <details class="lyric-section">
+                <summary>👉 Xem lời bài hát</summary>
+                <div class="lyric-content">ÁNH XUÂN PHẬT QUANG
+(Verse 1)
+Xuân về trên mái chùa xưa
+Chuông ngân thức giấc sương mưa cuối trời
+Bước chân môn sinh hiền hòa
+Nâu sồng võ phục chan hòa đạo tâm
+Tay quyền luyện giữa nắng xuân
+Mồ hôi rơi mà lòng thêm sáng tỏ
+Học võ để thắng chính mình
+Học tâm để sống ân tình thủy chung
+(Pre-Chorus)
+Một lạy Phật sáng tim con
+Một lời Thầy dạy theo con suốt đời
+Quyền sinh từ tâm thanh tịnh
+Đạo sinh từ nghĩa tình đồng môn
+(Chorus)
+Phật Quang rạng ngời mùa xuân
+Ánh đạo soi chung một đường võ học
+Anh em tay nắm tay bền
+Tình môn phái vững như non như ngàn
+Xuân không chỉ ở hoa mai
+Xuân trong ánh mắt hiền hòa tỉnh thức
+Cùng nhau giữ trọn lời thề
+Sống cho đạo sáng – cho quê hương lành
+(Verse 2)
+Có người đến trước, sau sau
+Nhưng chung một nguyện tu trao thân tâm
+Khổ đau học cách lặng im
+Lỗi mình trước hết – rồi tìm thương yêu
+Ngã đau đứng dậy mỉm cười
+Võ rèn thân – đạo rèn người bên trong
+Thắng thua gửi gió mây trôi
+Chỉ còn nghĩa nặng tình sâu với đời
+(Pre-Chorus 2)
+Xuân về nhớ Phật thành đạo
+Nhớ công Thầy lặng lẽ sớm hôm
+Một đời trao ánh đuốc tâm
+Cho bao thế hệ vững lòng đi xa
+(Chorus – lặp)
+Phật Quang rạng ngời mùa xuân
+Ánh đạo soi chung một đường võ học
+Anh em tay nắm tay bền
+Tình môn phái vững như non như ngàn
+Xuân không chỉ ở hoa mai
+Xuân trong ánh mắt hiền hòa tỉnh thức
+Cùng nhau giữ trọn lời thề
+Sống cho đạo sáng – cho quê hương lành
+(Bridge – đạo vị, chậm, sâu)
+Nếu một ngày gió bụi phong ba
+Xin nhớ quay về nơi tâm tĩnh lặng
+Quyền có thể buông – đạo không rời
+Tình đồng môn còn mãi với thời gian
+(Final Chorus – cao trào)
+Phật Quang rạng rỡ mùa xuân
+Xuân trong từng nhịp quyền chan chứa
+Con nguyện giữ đạo làm người
+Giữa đời biến động vẫn cười an nhiên
+Xuân này con chắp tay thề
+Trước Phật – trước Thầy – trước huynh đệ
+Một đời võ đạo song hành
+Phật Quang Quyền sáng muôn năm xuân về</div>
+            </details>
         </div>
 
         <div class="track">
@@ -117,6 +270,70 @@
             <audio controls>
                 <source src="3ÁNH XUÂN PHẬT QUANG.mp3" type="audio/mpeg">
             </audio>
+            <details class="lyric-section">
+                <summary>👉 Xem lời bài hát</summary>
+                <div class="lyric-content">ÁNH XUÂN PHẬT QUANG
+(Verse 1)
+Xuân về trên mái chùa xưa
+Chuông ngân thức giấc sương mưa cuối trời
+Bước chân môn sinh hiền hòa
+Nâu sồng võ phục chan hòa đạo tâm
+Tay quyền luyện giữa nắng xuân
+Mồ hôi rơi mà lòng thêm sáng tỏ
+Học võ để thắng chính mình
+Học tâm để sống ân tình thủy chung
+(Pre-Chorus)
+Một lạy Phật sáng tim con
+Một lời Thầy dạy theo con suốt đời
+Quyền sinh từ tâm thanh tịnh
+Đạo sinh từ nghĩa tình đồng môn
+(Chorus)
+Phật Quang rạng ngời mùa xuân
+Ánh đạo soi chung một đường võ học
+Anh em tay nắm tay bền
+Tình môn phái vững như non như ngàn
+Xuân không chỉ ở hoa mai
+Xuân trong ánh mắt hiền hòa tỉnh thức
+Cùng nhau giữ trọn lời thề
+Sống cho đạo sáng – cho quê hương lành
+(Verse 2)
+Có người đến trước, sau sau
+Nhưng chung một nguyện tu trao thân tâm
+Khổ đau học cách lặng im
+Lỗi mình trước hết – rồi tìm thương yêu
+Ngã đau đứng dậy mỉm cười
+Võ rèn thân – đạo rèn người bên trong
+Thắng thua gửi gió mây trôi
+Chỉ còn nghĩa nặng tình sâu với đời
+(Pre-Chorus 2)
+Xuân về nhớ Phật thành đạo
+Nhớ công Thầy lặng lẽ sớm hôm
+Một đời trao ánh đuốc tâm
+Cho bao thế hệ vững lòng đi xa
+(Chorus – lặp)
+Phật Quang rạng ngời mùa xuân
+Ánh đạo soi chung một đường võ học
+Anh em tay nắm tay bền
+Tình môn phái vững như non như ngàn
+Xuân không chỉ ở hoa mai
+Xuân trong ánh mắt hiền hòa tỉnh thức
+Cùng nhau giữ trọn lời thề
+Sống cho đạo sáng – cho quê hương lành
+(Bridge – đạo vị, chậm, sâu)
+Nếu một ngày gió bụi phong ba
+Xin nhớ quay về nơi tâm tĩnh lặng
+Quyền có thể buông – đạo không rời
+Tình đồng môn còn mãi với thời gian
+(Final Chorus – cao trào)
+Phật Quang rạng rỡ mùa xuân
+Xuân trong từng nhịp quyền chan chứa
+Con nguyện giữ đạo làm người
+Giữa đời biến động vẫn cười an nhiên
+Xuân này con chắp tay thề
+Trước Phật – trước Thầy – trước huynh đệ
+Một đời võ đạo song hành
+Phật Quang Quyền sáng muôn năm xuân về</div>
+            </details>
         </div>
 
         <div class="track">
@@ -124,6 +341,69 @@
             <audio controls>
                 <source src="4Xuân Về Trong Ánh Mắt Người Thân.mp3" type="audio/mpeg">
             </audio>
+            <details class="lyric-section">
+                <summary>👉 Xem lời bài hát</summary>
+                <div class="lyric-content">Ca khúc: Xuân Về Trong Ánh Mắt Người Thân 🌸
+
+Verse 1
+Xuân về trên mái nhà xưa
+Khói lam chiều vương bếp lửa
+Mẹ cười bên nồi bánh chưng
+Cha ngồi châm ấm trà xuân
+Verse 2
+Con đi qua bao nẻo đời
+Cuối năm lại về nơi cũ
+Chỉ mong một bữa cơm chiều
+Đủ đầy tiếng nói thân quen
+Pre-Chorus
+Ngoài kia phố xá đông vui
+Trong tim lặng lẽ một điều
+Đi đâu rồi cũng nhớ
+Ơn sinh thành nuôi lớn bao năm
+Chorus
+Xuân là khi ta quay về
+Bên gia đình, bè bạn, thầy cô
+Xuân là khi ta học lại
+Cách sống hiền, sống biết cúi đầu
+Giữa bao lời chúc xa hoa
+Chỉ mong lòng người an vui
+Xuân không ở nơi pháo hoa
+Xuân nằm trong nghĩa tình người
+Verse 3
+Bạn ơi nâng chén trà này
+Chúc nhau thêm phần chân thật
+Giàu sang chẳng bằng bình yên
+Hiểu nhau qua những thăng trầm
+Verse 4
+Con sang thăm thầy đầu xuân
+Cúi đầu nghe lời nhắc cũ
+Học làm người trước khi hay
+Học yêu thương trước thành công
+Pre-Chorus 2
+Thầy không dạy điều cao xa
+Chỉ dạy sống cho vẹn tròn
+Biết ơn người đi trước
+Đường đời sẽ bớt chông gai
+Chorus 
+Xuân là khi ta quay về
+Bên gia đình, bè bạn, thầy cô
+Xuân là khi ta hiểu được
+Một chữ “ơn” quý hơn vàng
+Giữa bao điều được – mất
+Xin giữ lòng mình khiêm cung
+Xuân đi qua từng tuổi trẻ
+Nhưng đạo lý thì còn mãi
+Bridge
+Nếu một năm còn giông gió
+Xin đừng trách móc nhân gian
+Chỉ cần ta sống tử tế
+Xuân sẽ nở giữa đời thường
+Outro
+Mai xuân lại sang một tuổi
+Tóc ai thêm chút sương bay
+Chúc nhau lòng luôn trong sáng
+Để xuân ở mãi… trong tim</div>
+            </details>
         </div>
 
         <div class="track">
@@ -131,6 +411,59 @@
             <audio controls>
                 <source src="5Một Chén Trà Một Đời An.mp3" type="audio/mpeg">
             </audio>
+            <details class="lyric-section">
+                <summary>👉 Xem lời bài hát</summary>
+                <div class="lyric-content">🌿 Ca khúc: Một Chén Trà – Một Đời An 🌿
+
+Verse 1
+Sớm mai gió chạm hiên chùa
+Hơi trà ấm giữa sương mờ nhân gian
+Nước sôi kể chuyện vô thường
+Lá trà buông hết đoạn trường trong tim
+Pre-Chorus
+Chén nâng nhẹ, lòng hạ thấp
+Một hơi thở, vạn duyên tan
+Không tìm đâu xa xôi cả
+An nhiên ở chính nơi này
+Chorus
+Một chén trà, một đời an
+Uống cho tan hết ưu phiền
+Không quá khứ, chẳng tương lai
+Chỉ giây phút này đang nở hoa
+Một chén trà, một đời an
+Mắt cười theo áng mây trôi
+Thiền không ở chốn cao xa
+Thiền nằm yên giữa đời thường
+Verse 2
+Lá rơi chẳng hỏi vì sao
+Người đi cũng chẳng cần mang theo gì
+Vị đắng rồi sẽ thành ngọt
+Như đời, qua khổ mới hiểu từ bi
+Pre-Chorus 2
+Buông tay xuống, trà thêm thơm
+Buông lòng xuống, trí thêm trong
+Giữa bao điều còn – mất
+Ta còn lại một nụ cười
+Chorus (lặp)
+Một chén trà, một đời an
+Uống cho tan hết ưu phiền
+Không quá khứ, chẳng tương lai
+Chỉ giây phút này đang nở hoa
+Một chén trà, một đời an
+Nghe chuông lòng khẽ ngân vang
+Thiền không ở chốn cao xa
+Thiền là sống trọn từng giây
+Bridge (nói/rap thiền nhẹ)
+Không cần phải thành ai cả
+Chỉ cần quay về chính mình
+Trà không dạy ta trốn chạy
+Trà dạy ta nhìn thật sâu
+Outro
+Chiều buông nắng phía sau đồi
+Chén trà cạn, lòng vẫn đầy
+Mai này gió còn bao hướng
+Ta vẫn về ....với một chén trà</div>
+            </details>
         </div>
 
         <div class="track">
@@ -138,6 +471,81 @@
             <audio controls>
                 <source src="6HỒN VÕ SÀI GÒN – THÀNH PHỐ HỒ CHÍ MINH 2.mp3" type="audio/mpeg">
             </audio>
+            <details class="lyric-section">
+                <summary>👉 Xem lời bài hát</summary>
+                <div class="lyric-content">HỒN VÕ SÀI GÒN – THÀNH PHỐ HỒ CHÍ MINH
+Từ nghìn xưa…
+Khi cha ông dựng nước bằng đôi tay trần,
+Võ không chỉ để thắng người,
+Mà để giữ đạo – giữ đời – giữ non sông.
+Verse 1
+Sáng Sài Gòn, gió còn vương hơi sương,
+Sân võ xưa vang nhịp bước quen đường.
+Mồ hôi rơi ướt từng thế đứng,
+Mà lòng người vẫn thẳng như gươm.
+Không cần nói những lời cao xa,
+Một cái cúi đầu – đủ nghĩa thầy trò.
+Học đánh trước, rồi học nhịn,
+Học làm người trước lúc thành công.
+Pre-Chorus
+Giữa thành phố sáng đèn không ngủ,
+Võ âm thầm giữ lấy cội rễ xưa.
+Tay rèn thép, nhưng tâm phải mềm,
+Có từ bi mới giữ được nhân gian.
+Chorus
+🔥 Hồn võ Sài Gòn – Thành phố Hồ Chí Minh
+Nơi đạo và đời cùng chung nhịp thở.
+Mỗi đòn ra mang theo lời thề tổ quốc,
+Không khuất phục, không đánh mất lương tâm.
+🔥 Hồn võ Sài Gòn – Thành phố Hồ Chí Minh
+Giữ tinh hoa giữa thời đổi thay.
+Thân rèn lực – tâm rèn đạo đức,
+Đứng hiên ngang, con cháu Việt Nam!
+Verse 2
+Thành phố lớn, đời người rất nhanh,
+Có lúc quên mất mình từ đâu đến.
+Nhưng trong võ đường, tiếng trống vang lên,
+Gọi ta nhớ lại hồn dân tộc.
+Võ không dạy ta hơn người khác,
+Võ dạy ta thắng chính tham – sân – si.
+Ra cuộc sống, làm người tử tế,
+Đó mới là đỉnh cao võ uy.
+Pre-Chorus 2
+Không khoe khoang, không cầu danh lợi,
+Chỉ mong người sau còn nhớ người trước.
+Võ cổ truyền không nằm trên sân khấu,
+Mà sống trong từng cách ta đối nhân.
+Chorus 
+
+Hồn võ Sài Gòn – Thành phố Hồ Chí Minh
+Nơi võ Việt đứng cùng thời đại.
+Dẫu gió mưa, lòng không nghiêng ngả,
+Giữ niềm tin cho khắp muôn nơi.
+ Hồn võ Sài Gòn – Thành phố Hồ Chí Minh
+Mang hồn thiêng sông núi cha ông.
+Một thế võ – nghìn năm lịch sử,
+Một con người – gánh cả non sông.
+Bridge (lắng – sâu – chạm tim)
+Nếu một ngày ta đi rất xa,
+Xin nhớ nơi từng cúi đầu học đạo.
+Nếu võ Việt còn trong tim người trẻ,
+Thì nước non này… vẫn mãi trường tồn.
+Chorus 
+Hồn võ Sài Gòn – Thành phố Hồ chí minh
+Không chỉ là võ, mà là con đường sống.
+Giữ đạo lý giữa đời biến động,
+Cho Việt Nam bền vững mai sau.
+Hồn võ Sài Gòn – Thành phố Hồ Chí Minh
+Xin nguyện một lòng tiếp bước cha anh.
+Võ trong máu – đạo trong từng nhịp thở,
+Việt Nam mình… ngẩng mặt hiên ngang!
+[Outro]
+Võ cổ truyền Việt Nam,
+Không chỉ để mạnh hơn…
+Mà để tốt hơn.
+Tỏa sáng hôm nay – và còn mãi về sau,
+Tại Thành phố Hồ Chí Minh</div>
+            </details>
         </div>
 
         <div class="track">
@@ -145,6 +553,81 @@
             <audio controls>
                 <source src="7HỒN VÕ SÀI GÒN – THÀNH PHỐ HỒ CHÍ MINH 1.mp3" type="audio/mpeg">
             </audio>
+            <details class="lyric-section">
+                <summary>👉 Xem lời bài hát</summary>
+                <div class="lyric-content">HỒN VÕ SÀI GÒN – THÀNH PHỐ HỒ CHÍ MINH
+Từ nghìn xưa…
+Khi cha ông dựng nước bằng đôi tay trần,
+Võ không chỉ để thắng người,
+Mà để giữ đạo – giữ đời – giữ non sông.
+Verse 1
+Sáng Sài Gòn, gió còn vương hơi sương,
+Sân võ xưa vang nhịp bước quen đường.
+Mồ hôi rơi ướt từng thế đứng,
+Mà lòng người vẫn thẳng như gươm.
+Không cần nói những lời cao xa,
+Một cái cúi đầu – đủ nghĩa thầy trò.
+Học đánh trước, rồi học nhịn,
+Học làm người trước lúc thành công.
+Pre-Chorus
+Giữa thành phố sáng đèn không ngủ,
+Võ âm thầm giữ lấy cội rễ xưa.
+Tay rèn thép, nhưng tâm phải mềm,
+Có từ bi mới giữ được nhân gian.
+Chorus
+🔥 Hồn võ Sài Gòn – Thành phố Hồ Chí Minh
+Nơi đạo và đời cùng chung nhịp thở.
+Mỗi đòn ra mang theo lời thề tổ quốc,
+Không khuất phục, không đánh mất lương tâm.
+🔥 Hồn võ Sài Gòn – Thành phố Hồ Chí Minh
+Giữ tinh hoa giữa thời đổi thay.
+Thân rèn lực – tâm rèn đạo đức,
+Đứng hiên ngang, con cháu Việt Nam!
+Verse 2
+Thành phố lớn, đời người rất nhanh,
+Có lúc quên mất mình từ đâu đến.
+Nhưng trong võ đường, tiếng trống vang lên,
+Gọi ta nhớ lại hồn dân tộc.
+Võ không dạy ta hơn người khác,
+Võ dạy ta thắng chính tham – sân – si.
+Ra cuộc sống, làm người tử tế,
+Đó mới là đỉnh cao võ uy.
+Pre-Chorus 2
+Không khoe khoang, không cầu danh lợi,
+Chỉ mong người sau còn nhớ người trước.
+Võ cổ truyền không nằm trên sân khấu,
+Mà sống trong từng cách ta đối nhân.
+Chorus 
+
+Hồn võ Sài Gòn – Thành phố Hồ Chí Minh
+Nơi võ Việt đứng cùng thời đại.
+Dẫu gió mưa, lòng không nghiêng ngả,
+Giữ niềm tin cho khắp muôn nơi.
+ Hồn võ Sài Gòn – Thành phố Hồ Chí Minh
+Mang hồn thiêng sông núi cha ông.
+Một thế võ – nghìn năm lịch sử,
+Một con người – gánh cả non sông.
+Bridge (lắng – sâu – chạm tim)
+Nếu một ngày ta đi rất xa,
+Xin nhớ nơi từng cúi đầu học đạo.
+Nếu võ Việt còn trong tim người trẻ,
+Thì nước non này… vẫn mãi trường tồn.
+Chorus 
+Hồn võ Sài Gòn – Thành phố Hồ chí minh
+Không chỉ là võ, mà là con đường sống.
+Giữ đạo lý giữa đời biến động,
+Cho Việt Nam bền vững mai sau.
+Hồn võ Sài Gòn – Thành phố Hồ Chí Minh
+Xin nguyện một lòng tiếp bước cha anh.
+Võ trong máu – đạo trong từng nhịp thở,
+Việt Nam mình… ngẩng mặt hiên ngang!
+[Outro]
+Võ cổ truyền Việt Nam,
+Không chỉ để mạnh hơn…
+Mà để tốt hơn.
+Tỏa sáng hôm nay – và còn mãi về sau,
+Tại Thành phố Hồ Chí Minh</div>
+            </details>
         </div>
 
         <div class="track">
@@ -152,6 +635,62 @@
             <audio controls>
                 <source src="8_HẠT CÁT GIỮA DÒNG ĐỜI.mp3" type="audio/mpeg">
             </audio>
+            <details class="lyric-section">
+                <summary>👉 Xem lời bài hát</summary>
+                <div class="lyric-content">​HẠT CÁT GIỮA DÒNG ĐỜI.
+
+​[Verse 1]
+Rời quê hương mang theo hoài bão trẻ
+Vượt trùng dương chân bước tới xứ người
+Tay lao động nhưng lòng hướng về nẻo đạo
+Chí quật cường dẫu nắng cháy hay tuyết rơi.
+Nơi công xưởng hay công trường vất vả
+Giọt mồ hôi rơi chuyển hóa những nhọc nhằn
+Mỗi việc ta làm đều đong đầy phước thiện
+Ánh đạo vàng sưởi ấm những đêm băng.
+​[Pre-Chorus]
+Ta mang theo một sứ mệnh cao quý
+Gieo yêu thương cho nhân loại khắp nơi
+Phật pháp nhiệm màu là đuốc thiêng dẫn lối
+Cho cuộc đời bớt khổ lụy chơi vơi.
+​[Chorus]
+Vượt ngàn dặm xa ta thắp ánh quang minh
+Xây dựng tinh cầu rực rỡ một niềm tin
+Một tinh cầu giác ngộ không còn những khổ đau
+Đưa nhân loại xích lại gần với nhau.
+Cùng tinh tấn tu tập dẫu gian khó chẳng sờn
+Lòng yêu thương huynh đệ còn quý hơn kim cương
+Vì lý tưởng vĩ đại vì thế giới an hòa
+Ta tự hào là người con Phật Quang!
+​[Verse 2]
+Dẫu cách xa nhưng lòng không đơn độc
+Bởi ta chung nhau một Mái Nhà Phật Quang
+Cùng một Ân Sư người Thầy kính yêu ấy
+Dạy ta khiêm cung và sống đời yêu thương.
+Huynh đệ mình từ bốn phương hội tụ
+Cùng sớt chia nhau bát cơm những vui buồn
+Lúc yếu lòng có bàn tay nắm chặt
+Lúc mệt nhoài có đạo lý trào tuôn.
+​[Bridge]
+Này bạn ơi hãy vững tin bền chí
+Đoàn kết một lòng sức mạnh tựa đại dương
+Tâm khiêm hạ giữa dòng đời hối hả 
+Tỏa hương từ bi khắp vạn dặm nẻo đường.
+​
+Vượt ngàn dặm xa ta thắp ánh quang minh
+Xây dựng tinh cầu rực rỡ một niềm tin
+Một tinh cầu giác ngộ không còn những khổ đau
+Đưa nhân loại xích lại gần với nhau.
+Cùng tinh tấn tu tập dẫu gian khó chẳng sờn
+Lòng yêu thương huynh đệ còn quý hơn kim cương
+Vì lý tưởng vĩ đại vì thế giới an hòa
+Ta tự hào là người con Phật Quang!
+​[Outro]
+Vững bước đi bạn nhé vì lý tưởng trong tim
+Ánh sáng từ bi sẽ mãi mãi trường tồn
+Một tinh cầu giác ngộ...
+Ta cùng nhau... đắp xây.</div>
+            </details>
         </div>
 
         <div class="track">
@@ -159,6 +698,55 @@
             <audio controls>
                 <source src="9DƯỚI BÓNG TỪ BI.mp3" type="audio/mpeg">
             </audio>
+            <details class="lyric-section">
+                <summary>👉 Xem lời bài hát</summary>
+                <div class="lyric-content">DƯỚI BÓNG TỪ BI
+​[Verse]
+Về dưới mái chùa, lòng con bừng sáng
+Nắng ban mai rạng rỡ những nụ cười
+Lời Ân Sư như suối nguồn tươi mát
+Dắt dìu con đi giữa đời chơi vơi.
+Tuổi thanh xuân nguyện dâng lòng kính Phật
+Nỗ lực tu tập, gieo hạt giống lành
+Vì thế giới này, cần tình thương ấm áp
+Con bước đi bằng tâm nguyện cao xanh.
+​[Pre-Chorus]
+Lòng luôn nhắc nhở: "Cúi đầu thấp xuống"
+Giữ tâm khiêm hạ trên mọi nẻo đường.
+Không thấy mình là ai, chỉ là hạt cát nhỏ
+Phụng sự cuộc đời, chẳng mong cầu hồi đáp.
+​[Chorus]
+Sát cánh bên nhau, tình huynh đệ thắm thiết
+Quyết một lòng: Vâng lời, Xin phép, Báo cáo
+Chẳng chút chấp ý, chẳng màng đến chấp công
+Đoàn kết yêu thương, lòng sạch trong như bóng gương.
+Vâng lời Sư Phụ, xây Tinh cầu Giác ngộ
+Đem Đạo Pháp dựng xây đời bình an
+Từng bước chân đi, gieo niềm tin chân lý
+Dưới bóng Phật Quang, hạnh phúc mãi dâng tràn.
+​[Verse]
+Về với thiên nhiên, bảo vệ mầm sống nhỏ
+Cùng nhau lao tác, tay sạm nắng bụi trần
+Mà lòng vẫn vui, miệng cười tươi hỷ lạc
+Vì biết yêu thương hơn cả bản thân mình.
+Chánh pháp trong tim, lòng từ bi lan tỏa
+Diệt trừ tham ái, phá tan những mê mờ.
+​[Bridge]
+Dẫu đời gian khó, lòng chẳng hề lay chuyển
+Vì có Thầy thương, dẫn dắt những bến bờ.
+Trời cao rộng mở, lòng người thêm bao dung
+Thanh niên Phật Quang, rạng ngời tâm giác ngộ.
+​[Chorus]
+Sát cánh bên nhau, tình huynh đệ thắm thiết
+Quyết một lòng: Vâng lời, Xin phép, Báo cáo
+Chẳng chút chấp ý, chẳng màng đến chấp công
+Đoàn kết yêu thương, lòng sạch trong như bóng gương.
+Vâng lời Sư Phụ, xây Tinh cầu Giác ngộ
+Đem Đạo Pháp dựng xây đời bình an.
+​[Outro]
+Nguyện dâng tất cả, cho đạo pháp trường tồn
+Vì một thế giới... rạng ngời ánh từ quang.</div>
+            </details>
         </div>
 
         <div class="track">
@@ -166,6 +754,22 @@
             <audio controls>
                 <source src="10THÁNH TRÍ BÁT NHÃ (1).mp3" type="audio/mpeg">
             </audio>
+            <details class="lyric-section">
+                <summary>👉 Xem lời bài hát</summary>
+                <div class="lyric-content">THÁNH TRÍ BÁT NHÃ
+	Khi Bồ Tát Quán Tự Tại thành tựu được Chánh Định thẳm sâu, phát sinh trí tuệ Bát Nhã vi diệu, liền thấy thân tâm năm uẩn này trống rỗng, không quan trọng nữa, và ngay đó vượt qua tất cả đau khổ.   
+	Này Xá Lợi Phất, Bồ Tát thành tựu được Chánh Định vĩ đại an lành nên không còn chấp vào sắc thân, tự tại đối với sắc thân; không còn bị chi phối bởi cảm giác, tự tại đối với cảm giác; không còn vướng mắc nơi tâm tưởng, tự tại đối với tâm tưởng; không còn lệ thuộc vào tâm năng, tự tại đối với tâm năng; không còn bị giới hạn bởi cái biết, tự tại đối với cái biết.   
+	Này Xá Lợi Phất, với sự tự tại an lành như thế, Bồ Tát đi vào sinh tử mang hạnh nguyện hóa độ chúng sinh. Khi ở trong sinh tử, Bồ Tát không bị dính mắc bởi bất cứ điều gì, không cần bất cứ điều gì, không xao động theo bất cứ sự biến dịch nào của cuộc đời. Bồ Tát đến với chúng sinh bằng tâm từ bi vô hạn, không phân biệt kẻ sang người hèn, kẻ dở người hay, thậm chí thương yêu cả kẻ xấu ác để tìm cách hóa độ. Bồ Tát sẽ phải chấp nhận mọi điều tôn vinh hay nhục mạ, vinh quang hay cay đắng một cách bình thản. Dũng lực của Bồ Tát là vô biên vô hạn.   
+	Bồ Tát sẽ tùy theo tâm tình, sở thích, ngôn ngữ của chúng sinh mà tìm cách hóa độ chứ không chấp cứng vào văn tự Kinh điển vì cả cuộc sống của Bồ Tát là một bài Kinh thiêng liêng bất tận; những việc làm của Bồ Tát là tấm gương sáng ngời, ngay cả một cái nhìn hay sự im lặng của Bồ Tát cũng như sấm sét có thể làm thay đổi tâm hồn người đối diện.   
+	Tâm của Bồ Tát chính là vô lượng đạo lý; lời nói của Bồ Tát chính là vô lượng Kinh điển, nghe không giống như ngôn ngữ cổ thư nhưng không hề sai khác với ý Phật. 
+	Bồ Tát thực hành Bát Nhã như thế nên thành tựu vô lượng công đức. Những công đức này khiến cho Bồ Tát trở nên một vị Thánh đầy uy lực, không một chướng ngại nào, khổ nạn nào có thể xâm phạm được nữa. Bồ Tát đạt được sự bình an vô hạn cả nội tâm và ngoại cảnh.   
+	Chư Phật từ xưa đến nay hay sau này đều thực hành Bát Nhã như thế, thành tựu Chánh Định như thế, có được tự tại như thế, giáo hóa chúng sinh như thế để đắc thành Vô Thượng Chánh Đẳng Chánh Giác. 
+Thần lực phi thường của Phật và Đại Bồ Tát có thể cứu giúp chúng sinh qua khỏi khổ nạn cấp thời để chúng sinh có cơ hội tu tập và gây tạo phước lành đền bù ác nghiệp quá khứ.  
+	Phải biết Bát Nhã là bờ bến hiền lành an ổn là thuyền to lớn giữa biển sóng lao xao, là ánh sáng soi rọi giữa đêm đen mờ mịt, là sự cao thượng vượt hơn mọi điều cao thượng trên đời.
+	Nam Mô Bổn Sư Thích Ca Mâu Ni Phật 
+Nam Mô Bổn Sư Thích Ca Mâu Ni Phật 
+Nam Mô Bổn Sư Thích Ca Mâu Ni Phật</div>
+            </details>
         </div>
 
         <div class="track">
@@ -173,6 +777,129 @@
             <audio controls>
                 <source src="11THẮNG QUANG MỘT THẬP KỶ VÕ ĐẠO.mp3" type="audio/mpeg">
             </audio>
+            <details class="lyric-section">
+                <summary>👉 Xem lời bài hát</summary>
+                <div class="lyric-content">THẮNG QUANG MỘT THẬP KỶ VÕ ĐẠO
+
+Intro (Trang nghiêm – chiêng trống)
+(Chiêng trầm vang – trống trận chậm)
+Ngàn năm đất Bắc linh thiêng
+Hồn sông núi vọng tiếng thiêng võ đài
+
+
+---
+
+Verse 1
+
+Giữa Thủ Đô ngàn năm văn hiến,
+Một hạt mầm võ đạo nảy sinh.
+Từ tâm nguyện giữ gìn giềng mối,
+Cha ông trao lại ánh lửa thiêng.
+
+Mười năm qua – bao mùa nắng gió,
+Gieo từng thế võ giữa đời thường.
+Không chỉ rèn thân cho cứng cáp,
+Mà rèn tâm đứng vững trước vô thường.
+
+
+---
+
+Pre-Chorus (Trang nghiêm – nâng dần)
+
+Học võ để biết mình còn nhỏ,
+Biết cúi đầu trước đạo nghĩa sâu xa.
+Khắc chế cái tôi – nuôi lớn chí,
+Lấy Nhân – Lễ – Nghĩa dựng sơn hà.
+
+
+---
+
+Chorus (Hào hùng – hợp xướng)
+
+Thắng Quang ơi! Mười năm rực sáng,
+Phật Quang Quyền soi lối bước ta đi.
+Giữ võ đạo – giữ hồn dân tộc,
+Giữa đất Bắc vang khí thiêng thiêng.
+
+Thắng Quang ơi! Một lòng son sắt,
+Mười điều môn quy khắc dạ khắc tâm.
+Sáu lời thề nuôi chí võ sĩ,
+Sống khiêm cung – chính trực – trung kiên.
+
+
+---
+
+Verse 2 (Ballad – đàn dây, sáo tre)
+
+Có những đêm lặng yên sân tập,
+Chỉ tiếng gió chạm bóng trăng ngà.
+Mỗi thế võ là lời nhắc nhở,
+Giữ tâm hiền giữa cõi phong ba.
+
+Học nhẫn nhịn khi lòng nổi sóng,
+Học bao dung khi bị tổn thương.
+Võ không để hơn thua thắng bại,
+Mà để người… sáng đạo – bền đường.
+
+
+---
+
+Pre-Chorus 2 (Sâu lắng)
+
+Mười điều môn quy – nền móng vững,
+Dạy làm người trước khi dạy võ.
+Sáu lời thề – như gươm giữ đạo,
+Soi lối đi giữa cám dỗ đời.
+
+
+---
+
+Chorus (Lặp – mạnh hơn)
+
+Thắng Quang ơi! Mười năm rực sáng,
+Một mái nhà hun đúc chí anh hùng.
+Huynh đệ một lòng – khiêm nhu dũng cảm,
+Vai kề vai giữ trọn chữ Trung.
+
+
+---
+
+Bridge (Hùng tráng – trống & kèn đồng)
+
+Từ võ đường nhỏ giữa lòng Thủ Đô,
+Vươn chí lớn vì non sông đất Việt.
+Nguyện giữ Phật Pháp – lòng không lay chuyển,
+Nguyện bảo vệ Tổ quốc đến muôn đời.
+
+Không chia rẽ – không tranh môn phái,
+Chung tay dựng võ học Việt Nam.
+Mỗi thế hệ là một cột trụ,
+Chống phong ba cho giống nòi ta.
+
+
+---
+
+Chorus cuối (Đại hợp xướng – cao trào)
+
+Thắng Quang ơi! Một thập kỷ võ đạo,
+Khắc tên mình vào sử Việt hùng ca.
+Từ Phật Quang Quyền – lan ánh sáng,
+Dựng con người – dựng nước – dựng nhà.
+
+Thắng Quang ơi! Nguyện đời phụng sự,
+Lấy võ đạo làm gốc tu thân.
+Vì Phật Pháp – vì dân tộc Việt,
+Đi trọn đời… không thẹn lương tâm!
+
+
+---
+Outro (Thiêng liêng – chậm – chiêng trống khép)
+
+Một cú chào – dâng lên Tổ nghiệp,
+Một nén tâm – gửi đất trời Nam.
+Võ đường Thắng Quang còn mãi,
+Mười năm – trăm năm – vạn năm võ đạo trường tồn.</div>
+            </details>
         </div>
 
         <div class="track">
@@ -180,6 +907,68 @@
             <audio controls>
                 <source src="12CHÉN TRÀ SÁNG – GIỮA ĐỜI VÀ ĐẠO.mp3" type="audio/mpeg">
             </audio>
+            <details class="lyric-section">
+                <summary>👉 Xem lời bài hát</summary>
+                <div class="lyric-content">CHÉN TRÀ SÁNG – GIỮA ĐỜI VÀ ĐẠO
+
+Verse 1
+Sáng tinh sương, khi chuông chùa còn vắng
+Khói trà bay, ấm nhẹ cả đôi tay
+Ngồi lặng yên, nghe lòng thôi gió động
+Giữa cuộc đời nhiều lối rẽ đổi thay
+
+Verse 2
+Ta đã đi qua bao mùa được mất
+Bước phong trần in dấu cát nhân gian
+Có những lúc tưởng lòng mình kiệt sức
+Chỉ chén trà còn nhắc sống dịu dàng
+
+Pre-Chorus
+Một hơi thở
+Về rất khẽ
+Buông tham – giận
+Khỏi bộn bề
+
+Chorus
+Chén trà sáng – dạy ta nhìn cho rõ
+Khổ hay vui cũng đến rồi đi
+Đắng ban đầu, sau là hương rất nhẹ
+Như kiếp người, nhẫn nại mới từ bi
+
+Chén trà sáng – không rời đời, bỏ đạo
+Giữa chợ người vẫn giữ tâm trong
+Biết cúi xuống, biết thương nhau một chút
+Là con đường… Phật giữa nhân gian
+
+Verse 3
+Không cầu xa, cũng không mong trốn chạy
+Đời còn đây, ta vẫn sống, vẫn làm
+Nhưng học cách bước đi không gây khổ
+Cho mình – người, trong từng việc nhỏ nhan
+
+Bridge
+Trà không giảng
+Mà tâm thông
+Không lời pháp
+Vẫn tỏ lòng
+
+Một niệm thiện
+Khởi rất khẽ
+Cũng đủ làm
+Sáng nhân gian
+
+Chorus (nhẹ – sâu)
+Chén trà sáng – thay lời kinh tỉnh thức
+Giữa vô thường, ta biết quay về
+Không níu giữ, cũng không hờn giận
+Chỉ sống sao… cho bớt não nề
+
+Outro
+Mai trời lên, đời còn bao việc cũ
+Ta lại pha, lại uống, lại cười hiền
+Giữa nhân thế, xin làm người tỉnh táo
+Giữ chén trà… giữ sáng tâm mình.</div>
+            </details>
         </div>
 
         <div class="track">
@@ -187,6 +976,87 @@
             <audio controls>
                 <source src="13VỀ NHÀ.mp3" type="audio/mpeg">
             </audio>
+            <details class="lyric-section">
+                <summary>👉 Xem lời bài hát</summary>
+                <div class="lyric-content">🎵 BÀI HÁT: VỀ NHÀ
+
+
+---
+
+Verse 1
+
+Hôm nay con trở về Nhà,
+Mang theo nỗi nhớ chan hòa thiết tha.
+Bóng Thầy rộng lớn bao la,
+Cho con bóng mát để mà tựa nương.
+
+Lòng Thầy ấm áp tình thương,
+Dạy con từng bước, từng đường con đi.
+Từ những điều nhỏ li ti,
+Đến bao bài học khắc ghi suốt đời.
+
+
+---
+
+Verse 2
+
+Những ngày đầu học đường võ,
+Con còn bỡ ngỡ, vụng dại bấy nhiêu.
+Tay chân chưa vững bao điều,
+Nhờ Thầy kiên nhẫn dìu theo từng giờ.
+
+Hôm nay được học đao cùng Thầy,
+Đao kiếm lướt nhẹ như bay giữa trời.
+Uy nghi trong mỗi thế ngời,
+Mềm nhưng vẫn lực, sáng ngời võ phong.
+
+
+Pre-Chorus
+
+Ngoài võ học, Thầy còn dạy con làm người,
+Khiêm nhu để vững đôi tay giữa đời.
+Dũng tâm đứng vững không rời,
+Sống như ngọn lửa sáng trời nhân gian.
+
+
+---
+
+Chorus
+Con mong từng tháng, từng ngày,
+Được theo Thầy học cả tài lẫn tâm.
+Ơn Thầy con khắc giữ thầm,
+Võ trong thân xác — Đạo nằm trong tim.
+
+Hôm nay trở về nhẹ êm,
+Như đứa trẻ nhỏ tìm thêm chính mình.
+Bóng Thầy dìu bước ân tình,
+Cho con trọn kiếp một chữ Về Nhà.
+
+
+---
+
+Bridge
+
+Dẫu mai sóng gió trải dài,
+Lời Thầy vẫn sáng nơi tim không rời.
+Vạn đời con nguyện không vơi,
+Tấm lòng tri kính gửi người dẫn con.
+
+
+---
+
+Final Chorus
+
+Con mong từng tháng, từng ngày,
+Được theo Thầy học cả tài lẫn tâm.
+Ơn Thầy con khắc giữ thầm,
+Võ trong thân xác — Đạo nằm trong tim.
+
+Xin cho con mãi tròn duyên,
+Về Nhà để sống bình yên giữa đời.
+Theo Thầy, trọn nghĩa trọn lời,
+Dâng lên môn phái sáng mãi trong tim.</div>
+            </details>
         </div>
 
         <div class="track">
@@ -194,6 +1064,49 @@
             <audio controls>
                 <source src="14VŨ MINH ÁNH ĐẠO TRÊN ĐẤT VÕ (1).mp3" type="audio/mpeg">
             </audio>
+            <details class="lyric-section">
+                <summary>👉 Xem lời bài hát</summary>
+                <div class="lyric-content">BÀI HÁT: VŨ MINH – ÁNH ĐẠO TRÊN ĐẤT VÕ
+
+Trên miền đất võ Tây Sơn ngời sáng,
+Vũ Minh ta hội tụ giữa trời xanh.
+Bao huynh đệ sớm chiều cùng tập luyện,
+Giữ lòng son, rèn chí lớn, chí bền.
+
+Mỗi ngày bước tới sân chùa quen thuộc,
+Tiếng chân vang hòa nhịp thở tâm thiền.
+Tình huynh đệ kết thành bao sợi nắng,
+Ấm ân tình qua tháng rộng năm dài.
+
+Vũ Minh ơi! Ngọn lửa sáng trong tim,
+Dùng võ rèn thân, rèn tâm thêm trong khiết.
+Khiêm nhu soi đường, dũng cảm dẫn ta đi,
+Theo đạo lý Tôn Sư, vẹn nghĩa tình bền chí.
+Vũ Minh ơi! Ta nguyện sống giữa đời,
+Dụng võ giúp dân, cho cuộc đời thêm đẹp.
+
+Tay nâng quyền, dáng thân như núi vững,
+Tâm an hòa tựa dòng nước trong veo.
+Một đường quyền nối một đường đạo lý,
+Hóa thân ta thành ánh sáng nhiệm mầu.
+
+Dẫu phong ba hay đường đời nghiêng ngả,
+Huynh đệ ta vẫn kề sát vai nhau.
+Từ miền đất võ vươn ra muôn nẻo,
+Mang nghĩa khí vào gió bụi trần gian.
+
+Vũ Minh ơi! Ngọn lửa sáng trong tim,
+Dùng võ rèn thân, rèn tâm thêm trong khiết.
+Khiêm nhu soi đường, dũng cảm dẫn ta đi,
+Theo đạo lý Tôn Sư, vẹn nghĩa tình bền chí.
+Vũ Minh ơi! Ta nguyện sống giữa đời,
+Dụng võ giúp dân, cho cuộc đời thêm đẹp.
+
+Đất Tây Sơn ghi dấu bước chân này,
+Vũ Minh sáng như trăng rằm tháng Tám.
+Một đời nguyện giữ đạo thiêng môn phái,
+Phật Quang Quyền – chiếu rạng giữa lòng người.</div>
+            </details>
         </div>
 
         <div class="track">
@@ -201,6 +1114,48 @@
             <audio controls>
                 <source src="15VỀ TỔ ĐÌNH HÔM NAY.mp3" type="audio/mpeg">
             </audio>
+            <details class="lyric-section">
+                <summary>👉 Xem lời bài hát</summary>
+                <div class="lyric-content">VỀ TỔ ĐÌNH HÔM NAY
+
+(Bài hát dành cho môn sinh Phật Quang Quyền)
+
+[Đoạn 1]
+Hôm nay anh em ta về nơi Tổ Đình xưa
+Gặp nhau nụ cười chan chứa bao tình đồng môn
+Bước chân rộn ràng theo tiếng gió bay giữa núi đồi
+Lòng náo nức bao niềm vui.
+
+[Điệp khúc]
+Cùng nhau luyện tâm – luyện thân,
+Giữ trọn chí nguyện một đời theo võ đạo.
+Thầy dìu dắt ta đi, sáng bừng từng đường quyền uy nghi.
+Phật Quang Quyền ơi, bao thế hệ chung xây,
+Một lòng kết nối nghĩa huynh đệ bền sâu.
+Ngày về tập huấn, tay nắm tay cười,
+Thắp sáng niềm tin, rực rỡ môn phái ta!
+
+[Đoạn 2]
+Mồ hôi rơi nhưng tim ta càng thêm sáng ngời
+Một câu thầy dạy nâng bước con đường ta đi
+Khổ luyện từng ngày cho sức mạnh theo trí huệ
+Hồn võ đạo luôn rực lên.
+
+[Điệp khúc]
+Cùng nhau luyện tâm – luyện thân,
+Giữ trọn chí nguyện một đời theo võ đạo.
+Thầy dìu dắt ta đi, sáng bừng từng đường quyền uy nghi.
+Phật Quang Quyền ơi, bao thế hệ chung xây,
+Một lòng kết nối nghĩa huynh đệ bền sâu.
+Ngày về tập huấn, tay nắm tay cười,
+Thắp sáng niềm tin, rực rỡ môn phái ta!
+
+[Đoạn kết – Outro]
+Mai này dù đi muôn nơi,
+Vẫn nhớ Tổ Đình – nơi ta luyện rèn từ thuở đầu.
+Tình nghĩa đồng môn, sáng như ngàn sao,
+Phật Quang Quyền mãi vươn cao!</div>
+            </details>
         </div>
 
         <div class="track">
@@ -208,6 +1163,40 @@
             <audio controls>
                 <source src="16ƠN THẦY CÔ DẪN BƯỚC TƯƠNG LAI_1.mp3" type="audio/mpeg">
             </audio>
+            <details class="lyric-section">
+                <summary>👉 Xem lời bài hát</summary>
+                <div class="lyric-content">ƠN THẦY CÔ DẪN BƯỚC TƯƠNG LAI”
+
+Ngày thơ ấu bước qua cổng trường xưa,
+Thầy cô đón chúng em bằng nụ cười chan chứa.
+Từng trang vở mở ra bao ước mơ,
+Giọng nói dịu dàng nâng những tâm hồn ngây thơ.
+
+Thầy cô đã thắp sáng một niềm tin
+Dạy chúng em biết sống giữa đời bằng trái tim.
+Đường phía trước dẫu bão giông đi qua,
+Lời dạy năm nào vẫn theo ta như ánh sao trời.
+
+Bao tháng năm lặng thầm,
+Thầy cô gieo những mùa xuân lên cuộc đời em.
+Dạy em biết quý yêu từng phút giây,
+Biết đứng dậy khi vấp ngã giữa đường dài.
+
+Ơn nghĩa ấy khắc sâu trong trái tim
+Như suối mát tưới lên những khát vọng thanh khiết.
+Mai lớn khôn, bước đi giữa cuộc đời,
+Vẫn mang theo bóng hình thầy cô trong từng giấc mơ hiền.
+
+Dẫu mai sau muôn phương cách trở xa,
+Vẫn nhớ mãi ánh mắt trao niềm tin ngày ấy.
+Bài học xưa dẫn lối em hôm nay,
+Cho em chọn đường ngay, giữ tấm lòng trong sạch.
+
+Thầy cô ơi, nếu có một lời xin gửi,
+Là cảm ơn thật nhiều vì đã dạy em nên người.
+Dẫu thời gian đổi thay, trời đất xoay vần,
+Ơn nghĩa thầy cô còn mãi với đời em.</div>
+            </details>
         </div>
 
         <div class="track">
@@ -215,6 +1204,40 @@
             <audio controls>
                 <source src="17BÓNG THẦY GIỮA SÂN VÕ_1.mp3" type="audio/mpeg">
             </audio>
+            <details class="lyric-section">
+                <summary>👉 Xem lời bài hát</summary>
+                <div class="lyric-content">LỜI BÀI HÁT MỚI: “BÓNG THẦY GIỮA SÂN VÕ”
+
+Ngày đầu tiên em bước vào sân võ,
+Tiếng chân thầy vang nhịp vững như trời.
+Một vòng tay, một ánh nhìn nhắc nhở:
+“Học võ trước hết là học làm người.”
+
+Thầy dạy em biết đứng cho thật thẳng,
+Biết thở sâu khi tâm ý rối bời.
+Mỗi đường quyền, mỗi thế chân nhịp lắng
+Là một lời thầy gửi gắm cuộc đời.
+
+Rồi năm tháng trôi qua trong lặng lẽ,
+Mái tóc thầy sương gió cứ phai dần.
+Mỗi bình minh nghe tiếng thầy chỉ dạy
+Như nắng sớm thấm vào trái tim con.
+
+Trong cuộc sống bao ngày nhiều giông bão,
+Con vượt qua nhờ đạo lý thầy trao.
+Không hiếu thắng, không sân si tranh đấu,
+Đem yêu thương làm sức mạnh năm nào.
+
+Dẫu mai này con đi về muôn hướng,
+Bước đường xa chắc sẽ lắm đổi thay.
+Nhưng giữa đời, khi lòng mình lạc lối,
+Con lại nhớ… bóng thầy giữa sân võ hôm nay.
+
+Ơn của thầy chẳng ghi trong trang vở,
+Mà khắc sâu trong những bước con đi.
+Một chữ "Đạo" thầy trao bằng cả trái tim,
+Là hành trang theo con suốt cuộc đời này.</div>
+            </details>
         </div>
 
         <div class="track">
@@ -222,6 +1245,40 @@
             <audio controls>
                 <source src="18NGƯỜI THẦY KHÔNG CẦM PHẤN 2_1.mp3" type="audio/mpeg">
             </audio>
+            <details class="lyric-section">
+                <summary>👉 Xem lời bài hát</summary>
+                <div class="lyric-content">“NGƯỜI THẦY KHÔNG CẦM PHẤN”
+
+Ngày em bước vào võ đường đơn sơ,
+Thầy đứng đó giữa nắng chiều nghiêng đổ.
+Không bảng đen, chẳng phấn trắng như trường lớp,
+Chỉ ánh mắt hiền nâng bước em vào đời.
+
+Thầy dạy em từng thế võ đầu tiên,
+Mồ hôi rơi hòa nhịp chân kiên định.
+Giữa tiếng thở, thầy khẽ nói bao đạo lý:
+“Rèn được thân rồi… phải rèn tâm trước tiên.”
+
+Thầy như suối mát giữa ngày giông tố,
+Dạy em biết sống cho đúng nghĩa làm người.
+Không tranh hơn, chẳng hiếu thắng giữa đời,
+Lấy nhân nghĩa làm gốc, lấy khiêm cung làm bạn.
+
+Nhiều năm qua, từng vết thương trên tay
+Là kỷ niệm của những ngày rèn luyện.
+Mỗi bước tiến là công lao thầy lặng lẽ,
+Như ngọn đuốc soi em giữa bóng đêm.
+
+Dẫu mai này đường đời nhiều đổi thay,
+Em vẫn nhớ lời thầy – sâu hơn ngàn trang sách:
+“Giữ tâm sáng giữa dòng đời nghiệt ngã,
+Vững đôi chân nhưng mềm mại tấm lòng.”
+
+Người thầy ấy chẳng bao giờ cầm phấn,
+Nhưng viết lên đời em một con đường ngay thẳng.
+Ơn nghĩa ấy chẳng biết lấy gì đáp lại,
+Chỉ mong sống tốt như điều thầy dặn ngày xưa…</div>
+            </details>
         </div>
 
         <div class="track">
@@ -229,6 +1286,58 @@
             <audio controls>
                 <source src="19_Giữ Lửa Việt Trên Đất Nhật_.mp3" type="audio/mpeg">
             </audio>
+            <details class="lyric-section">
+                <summary>👉 Xem lời bài hát</summary>
+                <div class="lyric-content">Giữ Lửa Việt Trên Đất Nhật"
+
+(Phong cách: Trữ tình hào sảng – hiện đại kết hợp truyền thống)
+
+[Verse 1]
+Tạm biệt quê hương, tôi rời tổ quốc
+Mang sứ mệnh thiêng, vượt gió ngàn khơi
+Đất Nhật xa xăm, tuyết trắng chân trời
+Nhưng trong tim tôi – còn nguyên màu áo võ.
+
+[Verse 2]
+Giữa thành phố sáng đèn không ngủ
+Tôi âm thầm mở lớp võ quê hương
+Những đường quyền từ thuở lên đường
+Giờ vang vọng giữa trời Đông giá lạnh.
+
+[Chorus]
+Tôi – người Việt, lòng son không đổi
+Giữ hồn xưa qua từng thế võ truyền
+Dẫu đất khách gió sương muôn miền
+Vẫn một chí – mong ngày vinh danh tổ nghiệp.
+
+Tôi – một người, nhỏ nhoi nơi xứ lạ
+Nhưng tim này mang linh khí cha ông
+Dạy từng động tác, chắt từng giọt lòng
+Nuôi mộng lớn – võ Việt vươn trời Nhật.
+
+[Verse 3]
+Họ từng hỏi: Sao không chọn an yên?
+Tôi chỉ cười, vì tôi mang sứ mệnh
+Mỗi bước chân là một lần luyện
+Mỗi học trò là một hạt giống quê hương.
+
+[Bridge]
+Có đêm đông tay tôi run vì lạnh
+Nhưng ánh mắt trò thơm tựa lửa hồng
+Tôi biết rằng giữa chốn phiêu bồng
+Còn có võ Việt – đang dần trỗi dậy.
+
+[Chorus – nâng cao, tràn đầy hy vọng]
+Tôi – người Việt, lòng son không đổi
+Giữ hồn xưa qua từng thế võ truyền
+Mong một mai, giữa hoa anh đào nghiêng
+Nghe tiếng trống hội rền vang đất Nhật!
+
+Tôi – Lữ khách, nhưng tâm là chủ
+Trồng võ đạo như trồng cả giấc mơ
+Ngày trở về, mang vinh quang bất ngờ
+Cho môn phái, cho quê hương rạng rỡ!</div>
+            </details>
         </div>
 
         <div class="track">
@@ -236,6 +1345,44 @@
             <audio controls>
                 <source src="20TRÁI TIM NGƯỜI THẦY 1.mp3" type="audio/mpeg">
             </audio>
+            <details class="lyric-section">
+                <summary>👉 Xem lời bài hát</summary>
+                <div class="lyric-content">TRÁI TIM NGƯỜI THẦY 
+
+(Lời & cảm hứng: từ tấm lòng một người Thầy)
+
+[Phiên khúc 1]
+Những huy chương lấp lánh như hoa
+Thơm ngát hương nhưng rồi cũng phai nhạt
+Bàn tay con giơ cao giữa bao người
+Thầy đứng sau, lòng dâng trăm điều ngổn ngang
+
+[Phiên khúc 2]
+Mỗi bước chân ra đi là bài thi lớn
+Không phải quyền cước mà là tấm lòng son
+Có chia sẻ không? Có nhường nhịn không?
+Thành công con nhận, có còn biết ơn?
+
+[Điệp khúc]
+Thầy mừng lắm khi thấy các con cười
+Ánh mắt long lanh dưới ánh đèn thi đấu
+Nhưng trong tim, Thầy vẫn âm thầm hỏi:
+Liệu ta có đủ đạo hạnh để làm gương?
+Liệu những viên đá ngọc mà Thầy chạm tới
+Có hóa thành ngọc quý cho đời không?
+
+[Phiên khúc 3]
+Con đường võ chẳng chỉ có hào quang
+Mà là gốc rễ – nơi đạo đức lớn lên
+Lời Chưởng Môn xưa vẫn vang trong tim Thầy:
+"Không có đạo, quyền cước chỉ là mây"
+
+[Coda – lời kết]
+Các con là ngọn lửa thắp sáng đam mê
+Cũng là tấm gương khiến Thầy soi lại mình
+Làm Thầy... mới hiểu được người Thầy
+Là người học trò lớn nhất – suốt đời tu tâm...</div>
+            </details>
         </div>
 
          <div class="track">
@@ -243,6 +1390,44 @@
             <audio controls>
                 <source src="21TRÁI TIM NGƯỜI THẦY 2.mp3" type="audio/mpeg">
             </audio>
+            <details class="lyric-section">
+                <summary>👉 Xem lời bài hát</summary>
+                <div class="lyric-content">TRÁI TIM NGƯỜI THẦY 
+
+(Lời & cảm hứng: từ tấm lòng một người Thầy)
+
+[Phiên khúc 1]
+Những huy chương lấp lánh như hoa
+Thơm ngát hương nhưng rồi cũng phai nhạt
+Bàn tay con giơ cao giữa bao người
+Thầy đứng sau, lòng dâng trăm điều ngổn ngang
+
+[Phiên khúc 2]
+Mỗi bước chân ra đi là bài thi lớn
+Không phải quyền cước mà là tấm lòng son
+Có chia sẻ không? Có nhường nhịn không?
+Thành công con nhận, có còn biết ơn?
+
+[Điệp khúc]
+Thầy mừng lắm khi thấy các con cười
+Ánh mắt long lanh dưới ánh đèn thi đấu
+Nhưng trong tim, Thầy vẫn âm thầm hỏi:
+Liệu ta có đủ đạo hạnh để làm gương?
+Liệu những viên đá ngọc mà Thầy chạm tới
+Có hóa thành ngọc quý cho đời không?
+
+[Phiên khúc 3]
+Con đường võ chẳng chỉ có hào quang
+Mà là gốc rễ – nơi đạo đức lớn lên
+Lời Chưởng Môn xưa vẫn vang trong tim Thầy:
+"Không có đạo, quyền cước chỉ là mây"
+
+[Coda – lời kết]
+Các con là ngọn lửa thắp sáng đam mê
+Cũng là tấm gương khiến Thầy soi lại mình
+Làm Thầy... mới hiểu được người Thầy
+Là người học trò lớn nhất – suốt đời tu tâm...</div>
+            </details>
         </div>
 
         <div class="track">
@@ -250,6 +1435,42 @@
             <audio controls>
                 <source src="22Quỳnh Nở Lặng Đêm.mp3" type="audio/mpeg">
             </audio>
+            <details class="lyric-section">
+                <summary>👉 Xem lời bài hát</summary>
+                <div class="lyric-content">🎼 Lời nhạc – Quỳnh Nở Lặng Đêm
+
+(dạng lời ca, có thể hát thành bài)
+
+[Verse 1]
+Đêm khuya gió lặng bên hiên nhà,
+Thầy trò lặng lẽ, chén trà ngắm hoa.
+Hương quỳnh thoảng nhẹ qua,
+Trắng như ánh trăng ngà giữa đêm.
+
+[Verse 2]
+Một lần nở, một lần xem,
+Ngắn như giấc mộng êm đềm thoáng qua.
+Thầy rằng hoa giống kiếp ta,
+Thắp lên phút chốc... rồi là tro bay.
+
+[Chorus]
+Trò nghe lòng bỗng chơi vơi,
+Thương hoa, thương cả dòng đời nhẹ tênh.
+Không lời, ánh mắt lặng im,
+Trăng treo hiu hắt, trúc nghiêng nhạc trầm.
+
+[Bridge]
+Mai này hoa chẳng còn thắm,
+Nhưng đêm ấy mãi đong đầy trong tim.
+Một đêm, một đóa, một niềm,
+Thầy trò ngồi lại... lặng im ngẫm đời...
+
+[Outro – nhẹ nhàng, thoảng như sương]
+Quỳnh nở trong đêm...
+Rồi tàn trong mơ...
+Nhưng lòng vẫn nhớ...
+Một thời… cùng thơ…</div>
+            </details>
         </div>
 
         <div class="track">
@@ -257,6 +1478,78 @@
             <audio controls>
                 <source src="23NƠI CON TÌM VỀ - cover.mp3" type="audio/mpeg">
             </audio>
+            <details class="lyric-section">
+                <summary>👉 Xem lời bài hát</summary>
+                <div class="lyric-content">Con chưa từng biết núi,
+Con chỉ biết vực sâu.
+Bao tháng ngày tăm tối,
+Trong mờ ảo đêm thâu.
+
+Rồi đời con rẽ lối,
+Khỏi ngã tối hầm sâu.
+Nhờ chánh pháp nhiệm màu,
+Hướng con về ánh sáng.
+
+Biết yêu và biết xót,
+Cho nghịch cảnh chúng sinh.
+Biết sống tròn nghĩa tình,
+Biết kính nhường, khiêm hạ.
+
+Phước duyên con gặp được,
+Bậc minh sư dẫn bước.
+Tựa như vầng thái dương,
+Giữa biển đời ô trược.
+
+Thầy dạy con biết hát,
+Cho con biết yêu thơ.
+Biết giáo lý huyền cơ,
+Biết đường quyền võ thuật.
+
+Thầy dạy con lao động,
+Lòng dũng cảm vị tha.
+Lòng yêu nước bao la,
+Lòng trung thành tín nghĩa.
+
+Thầy cho con huynh đệ,
+Những gương mặt thân thương.
+Dìu nhau mọi nẻo đường,
+Cùng giúp nhau tiến đạo.
+
+Huynh đệ con đoàn kết,
+Huynh đệ con yêu thương.
+Lao động rất kiên cường,
+Tinh tấn trong mọi việc.
+
+Nguyện ngày tháng trôi qua,
+Cây đạo đức nở hoa.
+Trong lòng mỗi huynh đệ,
+Lan tỏa khắp nơi xa.
+
+Trên bước đường bôn ba,
+Con vẫn có mái nhà.
+Là mái nhà Phật pháp,
+Cho nghìn kiếp đi qua.
+
+Thầy dạy con biết hát,
+Cho con biết yêu thơ.
+Biết giáo lý huyền cơ,
+Biết đường quyền võ thuật.
+
+Thầy dạy con lao động,
+Lòng dũng cảm vị tha.
+Lòng yêu nước bao la,
+Lòng trung thành tín nghĩa.
+
+Thầy cho con huynh đệ,
+Những gương mặt thân thương.
+Dìu nhau mọi nẻo đường,
+Cùng giúp nhau tiến đạo.
+
+Huynh đệ con kề bên,
+Huynh đệ con yêu thương.
+Lao động rất kiên cường,
+Tinh tấn trong mọi việc.</div>
+            </details>
         </div>
 
         <div class="track">
@@ -264,6 +1557,54 @@
             <audio controls>
                 <source src="24🎶 chiêu đau của thầy.mp3" type="audio/mpeg">
             </audio>
+            <details class="lyric-section">
+                <summary>👉 Xem lời bài hát</summary>
+                <div class="lyric-content">🎶 Chiêu Đau Của Thầy
+
+(Thể loại: Nhạc vui – dân gian hiện đại)
+
+
+---
+
+[Verse 1]
+Xoạc chân giữa chốn thiền môn,
+Mà sao nước mắt… rơi dồn như mưa!
+Thầy kêu: “Xoạc xuống đi con,
+Cố lên một chút, vững hồn như chuông!”
+
+[Verse 2]
+Em nghe lời dặn mà buồn,
+Hai chân một phát… gác luôn hai miền.
+Thầy thì ghì chặt sát xiên,
+Mặt em méo xệch, tim phiền muốn xong!
+
+
+---
+
+[Chorus]
+"Con đau!" – em rít vang trời,
+Thầy cười tỉnh bơ: “Đau mới thành công!”
+Ngỡ tu là cõi thong dong,
+Ai ngờ luyện gối… gồng trong, gồng ngoài.
+
+
+---
+
+[Verse 3]
+Đêm về chân vẫn còn dai,
+Mơ màng thấy thầy… lại xài chiêu đau!
+Chắp tay con nguyện mai sau,
+Xin đừng xoạc nữa… thầy mau tha con!
+
+
+---
+
+[Outro – chậm lại, tếu táo]
+Một đời tu luyện gian nan,
+Vừa xong thiền định… là sang kéo giò!
+Thầy ơi con hứa chăm lo,
+Nhưng xin cho nghỉ… xoạc to sang năm!</div>
+            </details>
         </div>
 
          <div class="track">
@@ -271,6 +1612,66 @@
             <audio controls>
                 <source src="25Khongphutamnguyen.mp3" type="audio/mpeg">
             </audio>
+            <details class="lyric-section">
+                <summary>👉 Xem lời bài hát</summary>
+                <div class="lyric-content">Không Phụ Tâm Nguyện
+Verse 1
+Đời cuốn ta đi giữa muôn vàn bận rộn,
+Tháng năm trôi theo những nỗi lo thường.
+Muốn giữ đạo phải bền gan giữ chí,
+Giữ một con đường giữa gió sương.
+Verse 2
+Vì kính Phật, kính Tổ, thương Thầy,
+Thương tâm huyết bao đời dựng xây.
+Bao hy sinh trao cho từng thế hệ,
+Gửi cả đời mình trong từng thế tay.
+Pre-Chorus
+Dẫu mai này chỉ còn hơi thở,
+Vẫn nghĩ đến võ, vẫn luyện không ngơi.
+Dẫu thân này có về cát bụi,
+Hồn còn theo tiếng trống giữa đời.
+Chorus
+Yêu một người chưa chắc được yêu lại,
+Nhưng yêu võ, yêu nghề, yêu việc đời.
+Thì võ sẽ thương ta, nghề không phụ,
+Việc sẽ yêu ta đến trọn kiếp người.
+Tin như thế, tim bừng ánh lửa,
+Thấy đời này đẹp lắm, người ơi.
+Verse 3
+Sớm tinh sương, thân vừa rời giấc mộng,
+Hơi thở dâng theo nhịp khí công đều.
+Chưa kịp bước ra đời trong ánh nắng,
+Mồ hôi rơi đã thắp lửa trong chiều.
+Verse 4
+Ngày nối ngày, thân như lò than đỏ,
+Lửa trong tim chưa tắt một giây nào.
+Bước giữa đời mà hồn luôn vững chãi,
+Sống hết mình cho lý tưởng thanh cao.
+Pre-Chorus 2
+Không cần ai thấu hết lòng ta,
+Chỉ cần đạo hiểu, võ hiểu là vừa.
+Chỉ cần khi soi mình trong gương sáng,
+Biết đời này không sống thừa xót xa.
+Chorus (lặp)
+Yêu một người chưa chắc được yêu lại,
+Nhưng yêu võ, yêu nghề, yêu việc đời.
+Thì võ sẽ thương ta, nghề không phụ,
+Việc sẽ yêu ta đến trọn kiếp người.
+Tin như thế, tim bừng ánh lửa,
+Thấy đời này đẹp lắm, người ơi.
+Bridge
+Có những đêm thân mòn gối lạnh,
+Muốn buông tay giữa chặng đường dài.
+Nhưng tiếng Tổ, tiếng Thầy trong gió gọi,
+Lại đứng lên đi tiếp ngày mai.
+Final Chorus
+Yêu một người có khi là khổ lụy,
+Nhưng yêu lý tưởng là ánh sao soi.
+Yêu võ đạo, yêu nghề, yêu phụng sự,
+Là yêu đời bằng cả tim thôi.
+Tin như thế, lòng đầy nắng ấm,
+Thấy cuộc đời này… đáng sống biết bao!</div>
+            </details>
         </div>
 
         <div class="track">
@@ -278,6 +1679,40 @@
             <audio controls>
                 <source src="26NGƯỜI THẦY KHÔNG CẦM PHẤN 1_1.mp3" type="audio/mpeg">
             </audio>
+            <details class="lyric-section">
+                <summary>👉 Xem lời bài hát</summary>
+                <div class="lyric-content">“NGƯỜI THẦY KHÔNG CẦM PHẤN”
+
+Ngày em bước vào võ đường đơn sơ,
+Thầy đứng đó giữa nắng chiều nghiêng đổ.
+Không bảng đen, chẳng phấn trắng như trường lớp,
+Chỉ ánh mắt hiền nâng bước em vào đời.
+
+Thầy dạy em từng thế võ đầu tiên,
+Mồ hôi rơi hòa nhịp chân kiên định.
+Giữa tiếng thở, thầy khẽ nói bao đạo lý:
+“Rèn được thân rồi… phải rèn tâm trước tiên.”
+
+Thầy như suối mát giữa ngày giông tố,
+Dạy em biết sống cho đúng nghĩa làm người.
+Không tranh hơn, chẳng hiếu thắng giữa đời,
+Lấy nhân nghĩa làm gốc, lấy khiêm cung làm bạn.
+
+Nhiều năm qua, từng vết thương trên tay
+Là kỷ niệm của những ngày rèn luyện.
+Mỗi bước tiến là công lao thầy lặng lẽ,
+Như ngọn đuốc soi em giữa bóng đêm.
+
+Dẫu mai này đường đời nhiều đổi thay,
+Em vẫn nhớ lời thầy – sâu hơn ngàn trang sách:
+“Giữ tâm sáng giữa dòng đời nghiệt ngã,
+Vững đôi chân nhưng mềm mại tấm lòng.”
+
+Người thầy ấy chẳng bao giờ cầm phấn,
+Nhưng viết lên đời em một con đường ngay thẳng.
+Ơn nghĩa ấy chẳng biết lấy gì đáp lại,
+Chỉ mong sống tốt như điều thầy dặn ngày xưa…</div>
+            </details>
         </div>
 
         <div class="track">
@@ -285,6 +1720,85 @@
             <audio controls>
                 <source src="27MỘT MÁI NHÀ CHUNG.mp3" type="audio/mpeg">
             </audio>
+            <details class="lyric-section">
+                <summary>👉 Xem lời bài hát</summary>
+                <div class="lyric-content">MỘT MÁI NHÀ CHUNG
+
+[Verse 1]
+Có những ngày ta bước chung một lối
+Vai kề vai giữa gió ngược mưa giăng
+Chẳng hỏi nhau mai này ai đi trước
+Chỉ biết rằng… còn có nhau bên đường
+Có những lúc lòng người chưa trọn vẹn
+Lỡ một lời làm nhau thấy đau hơn
+Nhưng huynh đệ không vì điều nhỏ nhặt
+Mà quay lưng… bỏ lại nghĩa tình xưa
+[Pre-Chorus]
+Vì ai cũng mang trong mình một nỗi
+Mỗi chặng đường đều có lúc chông chênh
+Nếu không thương nhau qua những lỗi lầm
+Thì lấy gì giữ được nghĩa anh em
+[Chorus]
+Huynh đệ ơi, ta chung một mái nhà
+Chung một Cha, chung một bậc Ân Sư
+Nên đừng để chấp ý làm xa cách
+Đừng vì mình mà đánh mất tình thương
+Huynh đệ ơi, xin học cách bao dung
+Khi một người còn yếu, còn sai
+Không công kích, không gieo lời chia rẽ
+Cùng nắm tay xây hạnh phúc lâu dài
+[Verse 2]
+Có những khi gánh đời đè nặng quá
+Chỉ cần nhau ngồi lại lắng nghe thôi
+Không cần đúng, không cần ai thắng thua
+Chỉ cần còn… một tấm lòng không rời
+Môn phái lớn không nhờ lời hơn thua
+Mà lớn lên từ nhẫn nhịn, hy sinh
+Từ những người biết quên mình một chút
+Để giữ gìn… đại nghĩa chung quanh mình
+[Bridge ] 
+Huynh đệ à, ta nhắc nhau điều này
+Trước khi có anh em, đã có Thầy
+Chính một người lặng thầm gieo gốc rễ
+Mới cho ta đứng cạnh nhau hôm nay
+Nếu có lúc lòng ta chưa kịp sáng
+Xin nhớ về ánh đuốc thuở ban đầu
+Giữ được kính Thầy trong từng suy nghĩ
+Thì tình anh em… tự khắc bền lâu
+[Spoken Word ]
+
+Anh em mình gặp nhau không phải ngẫu nhiên
+Chung một lời dạy, chung một hướng đi
+Nên mới có thể gọi nhau là huynh đệ
+Và cùng ở dưới một mái nhà này
+Nếu có lúc bất đồng hay va chạm
+Xin nhớ rằng điều giữ ta lại
+Không phải là đúng – sai – hơn – thua
+Mà là ơn người đã cho ta đứng chung một hàng
+Làm đau nhau… cũng là làm đau mái nhà
+Chia rẽ nhau… là quay lưng với gốc rễ
+Nên thôi, anh em mình nhắc nhau sống cho đúng
+Để Thầy an lòng… và đạo được dài lâu
+
+[Chorus – Final]
+Huynh đệ ơi, xin giữ lòng cho vững
+Trước sau gì cũng nghĩ đến Ân Sư
+Đừng vì chấp ý làm tan mái ấm
+Mà bao đời người vun đắp không nguôi
+Huynh đệ ơi, ta đến đây không phải
+Để tìm hơn, tìm thua, tìm phần mình
+Mà cùng nhau dựng xây một chốn
+Cho muôn người nương tựa, gửi niềm tin
+[Outro]
+Rồi mai này khi tóc đã pha sương
+Nhìn lại quãng đường đã cùng nhau đi
+Chỉ mong nhớ… ta từng là huynh đệ
+Sống vì nhau, vì đạo, chẳng vì chi
+Một mái nhà không xây bằng lời nói
+Mà dựng nên từ nhẫn nhịn, yêu thương
+Thầy là gốc – huynh đệ là cành lá
+Gốc còn sâu… thì nhà mãi bền lâu.</div>
+            </details>
         </div>
 
         <div class="track">
@@ -292,68 +1806,484 @@
             <audio controls>
                 <source src="28 --MÙA XUÂN KHÔNG BIÊN GIỚI.mp3" type="audio/mpeg">
             </audio>
+            <details class="lyric-section">
+                <summary>👉 Xem lời bài hát</summary>
+                <div class="lyric-content">MÙA XUÂN KHÔNG BIÊN GIỚI
+Verse 1
+Khi ta còn ở giữa một làng quê nhỏ
+Quê hương là con ngõ, là dòng sông
+Ra khỏi tỉnh thành, quê hương là đất nước
+Mái cờ bay giữa bầu trời mênh mông
+Rồi một ngày ta ngước nhìn tinh tú
+Trái đất tròn lặng lẽ giữa hư không
+Bao biên giới bỗng trở thành rất nhỏ
+Chỉ còn tình người ở lại trong tim hồng
+Pre-Chorus
+Nếu cùng chung một mặt trời soi sáng
+Nếu cùng chung một nhịp thở yêu thương
+Tại sao ta còn chia màu da, tiếng nói
+Trong khi ta chung một mái nhà – địa cầu xanh?
+Chorus
+Mùa xuân này không còn biên giới
+Không còn ranh giới giữa tôi và anh
+Từ Á sang Âu, từ Phi sang Mỹ
+Chung một nụ cười hiền lành
+Mùa xuân này không còn chia cắt
+Không còn ai lạc giữa nhân gian
+Chúng ta gọi nhau bằng hai tiếng “con người”
+Trái đất này là quê hương chung ngàn năm
+Verse 2
+Có đứa trẻ sinh ra nơi chiến tuyến
+Có người già mong một sáng bình yên
+Nhưng gió xuân đâu hỏi màu quốc tịch
+Hoa vẫn nở đều ở mọi miền
+Nếu ta biết nhìn nhau bằng ánh mắt
+Không hận thù, không ngạo mạn phân chia
+Thì mỗi bước chân trên hành tinh nhỏ
+Là một bước gần hơn đến đại đồng kia
+Bridge (cao trào nhẹ, hiện đại)
+We are breathing the same blue sky
+Standing on the same spinning light
+No more borders in our hearts tonight
+Only love, only light
+Let the spring wind cross every line
+Let humanity redefine
+We are one on this fragile sphere
+Home is here… home is here
+Final Chorus (nâng tông)
+Mùa xuân này không còn biên giới
+Không còn bức tường giữa thế gian
+Từ ngọn núi cao đến bờ biển rộng
+Chung một nhịp tim nhân gian
+Mùa xuân này – mùa xuân đại đồng
+Mỗi người là một đóa hoa thơm
+Dù nói ngôn ngữ nào trên môi
+Ta vẫn chung một quê hương – Trái Đất này thôi.
+Outro (nhẹ, ngân dài)
+Khi ra ngoài vũ trụ bao la
+Ta mới hiểu điều giản đơn…
+Quê hương lớn nhất của con người
+Là tình thương… là tình thương…</div>
+            </details>
         </div>
 
         <div class="track">
-            <div class="track-title">29. VÕ ĐƯỜNG TRÍ VŨ </div>
+            <div class="track-title">29. VÕ ĐƯỜNG TRÍ VŨ</div>
             <audio controls>
                 <source src="Võ đường trí vũ 2_1.mp3" type="audio/mpeg">
             </audio>
+            <details class="lyric-section">
+                <summary>👉 Xem lời bài hát</summary>
+                <div class="lyric-content">Từ miền đất nắng gió Bà Rịa thân thương
+Võ đường Trí Vũ sáng lên giữa đời thường
+Nơi từng bước chân rèn thân luyện chí
+Học võ trước là học cách làm người.
+
+Giọt mồ hôi rơi theo từng thế võ
+Thâm ân Thầy, nghĩa tình huynh đệ sâu bền
+Không chỉ mạnh tay, nhanh chân, vững thế
+Mà vững lòng trước sóng gió cuộc đời.
+
+Sống thanh cao để đạo tâm sáng dẫn đường đi
+Rèn thân phụng sự, sống xứng đáng rồng nòi.
+
+Trí Vũ vang danh, Phật Quang Quyền tỏa sáng
+Hào khí ngời ngời nối tiếp bao thế hệ đi lên
+Dựng võ đường bằng niềm tin và lý tưởng
+Góp sức mình cho võ học nước non.
+
+Trí Vũ chung tay một lòng son sắt
+Tập luyện hôm nay vì ngày mai rạng ngời
+Giữ hồn dân tộc trong từng thế võ
+Cho Phật Quang Quyền mãi sáng muôn đời.
+
+Từ lớp trước trao tay cho lớp sau
+Ngọn lửa võ đạo chưa từng phai màu
+Dẫu gian khó lòng người vẫn vững
+Cùng nhau dựng xây một mái nhà chung.
+
+Có lúc ngã đau, có lúc mệt nhoài
+Nhưng đứng dậy bằng niềm tin bất hoại
+Vì phía trước là con đường lớn
+Con đường lý tưởng của Phật Quang Quyền dẫn lối.
+
+Trí Vũ vang danh, Phật Quang Quyền tỏa sáng
+Hào khí ngời ngời nối tiếp bao thế hệ đi lên
+Dựng võ đường bằng niềm tin và lý tưởng
+Góp sức mình cho võ học nước non.
+
+Trí Vũ chung tay một lòng son sắt
+Tập luyện hôm nay vì ngày mai rạng ngời
+Giữ hồn dân tộc trong từng thế võ
+Cho Phật Quang Quyền mãi sáng muôn đời.
+
+Từ Bà Rịa vươn xa khắp nẻo
+Trí Vũ hiên ngang giữa đất trời Việt Nam
+Võ đạo tình nghĩa còn vang mãi
+Hào khí Phật Quang rạng rỡ ngàn năm... Ô oh!</div>
+            </details>
         </div>
 
         <div class="track">
-            <div class="track-title">30. KHÓI TRẦM AN NHIÊN </div>
+            <div class="track-title">30. KHÓI TRẦM AN NHIÊN</div>
             <audio controls>
                 <source src="30KHÓI TRẦM AN NHIÊN.mp3" type="audio/mpeg">
             </audio>
+            <details class="lyric-section">
+                <summary>👉 Xem lời bài hát</summary>
+                <div class="lyric-content">KHÓI TRẦM AN NHIÊN
+Verse 1:
+Khói trầm bay lên giữa sớm mai
+Nhẹ như tâm ta buông thở dài
+Một niệm vừa tan theo gió thoảng
+Trời cao mở lối ánh ban mai
+Verse 2:
+Hương trầm lan xa khắp không gian
+Như lời kinh xưa vẫn dịu dàng
+Từng làn khói mỏng như vô ngã
+Chẳng đến, chẳng đi, chẳng vương mang
+Chorus:
+Ta ngồi nghe khói kể chuyện đời
+Bao nhiêu dâu bể cũng xa xôi
+Một làn hương nhẹ tan vào gió
+Tâm lặng rồi… vạn pháp thôi trôi
+Khói trầm không nói mà như nói
+Nhắc ta quay về với chính tôi
+Buông xuống ưu phiền trong phút chốc
+An nhiên giữa cuộc thế gian rồi
+Bridge (nhẹ, gần như tụng):
+Hít vào… nghe đất trời
+Thở ra… lòng thảnh thơi
+Khói bay… như mây nổi
+Tâm này… thôi chơi vơi
+Outro (nhẹ dần):
+Khói trầm tan giữa hư không
+Còn ta ở lại — tấm lòng mênh mông…</div>
+            </details>
         </div>
 
         <div class="track">
-            <div class="track-title">31. KHÓI TRẦM VÀ CHÉN TRÀ </div>
+            <div class="track-title">31. KHÓI TRẦM VÀ CHÉN TRÀ</div>
             <audio controls>
                 <source src="31KHÓI TRẦM VÀ CHÉN TRÀ.mp3" type="audio/mpeg">
             </audio>
+            <details class="lyric-section">
+                <summary>👉 Xem lời bài hát</summary>
+                <div class="lyric-content">🍵🌫️ KHÓI TRẦM VÀ CHÉN TRÀ
+Verse 1:
+Khói trầm bay qua hiên vắng
+Sớm mai vừa chạm mái chùa
+Giọt nắng rơi trên tay áo
+Thời gian như ngừng… không đưa
+Ấm trà vừa nghi ngút khói
+Hương sen lặng lẽ lan xa
+Ta nâng một chén rất chậm
+Nghe lòng mình bớt phong ba
+Verse 2:
+Khói trầm như lời nhắc nhẹ
+Đời người tựa áng mây trôi
+Trà tan nơi đầu lưỡi nhỏ
+Mà dư vị thấm muôn đời
+Một hơi thở vào tĩnh tại
+Một hơi thở ra an nhiên
+Ngoài kia bao nhiêu sóng gió
+Trong này — trời đất bình yên
+Chorus:
+Khói trầm bay… bay vào hư không
+Chén trà nghiêng… nghiêng cõi lòng
+Một chút đắng tan thành vị ngọt
+Như khổ đau hóa hư không
+Ta ngồi giữa đời lặng lẽ
+Không cầu được, chẳng cầu hơn
+Chỉ xin giữ tâm trong trẻo
+Như làn khói… nhẹ… không vương
+Bridge (nhẹ như thì thầm):
+Nước sôi… rồi cũng lặng
+Hương trầm… rồi cũng tan
+Chỉ còn tâm an trú
+Giữa mênh mang thế gian
+Outro (fade rất nhẹ):
+Khói trầm lên trời cao
+Chén trà còn ấm môi
+Một ngày trôi rất khẽ
+Ta về với chính tôi…</div>
+            </details>
         </div>
 
         <div class="track">
-            <div class="track-title">32. NÉT MỰC GIỮA HƯ KHÔNG </div>
+            <div class="track-title">32. NÉT MỰC GIỮA HƯ KHÔNG</div>
             <audio controls>
                 <source src="32NÉT MỰC GIỮA HƯ KHÔNG_1.mp3" type="audio/mpeg">
             </audio>
+            <details class="lyric-section">
+                <summary>👉 Xem lời bài hát</summary>
+                <div class="lyric-content">NÉT MỰC GIỮA HƯ KHÔNG
+
+Verse 1
+Giọt mực rơi… nghe thời gian lặng
+Trang giấy trắng… như cõi tâm mình
+Một hơi thở… đưa tay chấm mực
+Nét bắt đầu… từ khoảng vô sinh
+Bao năm tháng… trôi qua đầu bút
+Đời nghiêng mình… trong một chữ thôi
+Chữ Nhẫn viết… mà tay run nhẹ
+Vì hiểu đời… chưa dễ buông trôi
+Pre-Chorus
+Nghiêng nghiên mực… soi lòng sâu thẳm
+Chữ chưa thành… đã thấy mình sai
+Học khiêm hạ… từ từng dấu chấm
+Đạo hiện về… chẳng ở tương lai
+Chorus
+Một nét ngang… gánh bao nhân thế
+Một nét sổ… dựng cả niềm tin
+Mực chưa khô… lòng ta đã tĩnh
+Thấy đất trời… lắng xuống trong tim
+Viết cho người… cũng là viết lại
+Chính thân này… giữa cõi phù vân
+Chữ thành hình… nhưng tâm phải sáng
+Thư pháp đời… là đạo tu thân
+Verse 2
+Gió ngoài hiên… lay trang giấy mỏng
+Như nhắc rằng… vạn pháp mong manh
+Chữ Tâm viết… không bằng lời giảng
+Sống chân thành… mực tự hóa thanh
+Có những chữ… đời không viết nổi
+Bởi ngã mạn… còn đọng nơi tay
+Khi cúi xuống… lòng thôi phân biệt
+Mỗi nét cong… cũng hóa hoa bay
+Bridge (nhẹ, gần như thì thầm)
+Không phải đẹp… là do hình tướng
+Không phải cao… là chữ bay xa
+Đẹp là khi… lòng không vướng bận
+Viết một lần… mà sáng muôn nhà
+Chorus cuối (cao trào vừa phải, không gắt)
+Một nét ngang… nối bao duyên nghiệp
+Một nét cong… mở lối quay về
+Trang giấy trắng… như đời tái sinh
+Khi buông hết… mọi điều u mê
+Mực cạn rồi… mà hương còn đó
+Chữ tan rồi… đạo vẫn còn đây
+Thư pháp ấy… không nằm trên giấy
+Mà trong người… mỗi phút hôm nay</div>
+            </details>
         </div>
 
         <div class="track">
-            <div class="track-title">33. ANH HÙNG... RỬA CHÉN </div>
+            <div class="track-title">33. ANH HÙNG... RỬA CHÉN</div>
             <audio controls>
                 <source src="33🎵 ANH HÙNG... RỬA CHÉN 🎵.mp3" type="audio/mpeg">
             </audio>
+            <details class="lyric-section">
+                <summary>👉 Xem lời bài hát</summary>
+                <div class="lyric-content">🎵 ANH HÙNG... RỬA CHÉN 🎵
+(Nhạc vui tươi, tiết tấu nhanh, có thể thêm tiếng vỗ tay và bè phụ họa)
+🎶 Verse 1
+Một đời luyện võ anh hùng
+Bao năm tung chưởng giữa vùng gió mây
+Trên lớp oai phong thế này
+Quát một tiếng nhỏ, rung ngay sàn nhà
+Đệ tử đứng thẳng như là
+Nghe thầy hô một… “YA!” là im re
+Ai nhìn cũng phải nể ghê
+Tưởng đâu thiên hạ chẳng chê chỗ nào
+🎶 Pre-Chorus
+Ai ngờ bước tới cửa rào
+Về nhà nghe tiếng vợ chào: “Anh ơi!”
+Hào quang bỗng tắt ngang trời
+Thanh long bạch hổ… hóa người rửa mâm
+🎶 Chorus (cao trào vui nhộn)
+Anh hùng nay đứng… bếp trong
+Chảo xoong cơm nước xoay vòng như bay
+Ban ngày múa võ hăng say
+Ban đêm cúi xuống… rửa tay, rửa nồi
+Đời người nghĩ cũng buồn cười
+Trên sàn oai dũng, dưới đời… nấu canh
+Nhưng thôi nghĩ lại cũng đành
+Anh hùng chân chính… phải thành… người ngoan! 😄
+🎶 Verse 2
+Ngày xưa ra đòn như phong
+Song phi cước đá long tong cả phòng
+Bây giờ tay xách bịch bông
+Đi chợ trả giá, trong lòng xót xa
+Đệ tử gọi: “Thầy ơi mà!”
+Ở nhà vợ gọi: “Anh à! Lau sân!”
+Võ công cao đến mười phần
+Không qua nổi ải… rửa chân cho nàng
+🎶 Bridge (hơi chậm lại, hài hước mà ấm áp)
+Nghĩ đi nghĩ lại cho đàng
+Giang hồ chi nữa, gia trang mới bền
+Anh hùng chẳng chỉ ở trên
+Sàn thi đấu, mà ở bên gia đình
+Biết thương, biết nhịn, biết nhìn
+Đó là nội lực… thâm tình cao siêu
+Thắng người đâu có bao nhiêu
+Thắng mình mới thật là điều đáng khen
+🎶 Chorus cuối (vui hơn, có thể tăng tông)
+Anh hùng đâu phải chỉ gân
+Mà còn biết rửa bát, chân không nề hà
+Trên đời ai cũng vậy mà
+Ra ngoài oai dũng, về nhà… dịu êm
+Vào hội thì cứ vào thêm
+Cho vui bằng hữu, khỏi thèm tủi thân
+Nhưng mà nhớ nhé anh hùng
+Giữ cho mái ấm… muôn trùng bình yên!</div>
+            </details>
         </div>
 
         <div class="track">
-            <div class="track-title">34. ANH HÙNG... RỬA CHÉN 2 </div>
+            <div class="track-title">34. ANH HÙNG... RỬA CHÉN 2</div>
             <audio controls>
                 <source src="34🎵 ANH HÙNG... RỬA CHÉN 🎵 (1).mp3" type="audio/mpeg">
             </audio>
+            <details class="lyric-section">
+                <summary>👉 Xem lời bài hát</summary>
+                <div class="lyric-content">🎵 ANH HÙNG... RỬA CHÉN 🎵
+(Nhạc vui tươi, tiết tấu nhanh, có thể thêm tiếng vỗ tay và bè phụ họa)
+🎶 Verse 1
+Một đời luyện võ anh hùng
+Bao năm tung chưởng giữa vùng gió mây
+Trên lớp oai phong thế này
+Quát một tiếng nhỏ, rung ngay sàn nhà
+Đệ tử đứng thẳng như là
+Nghe thầy hô một… “YA!” là im re
+Ai nhìn cũng phải nể ghê
+Tưởng đâu thiên hạ chẳng chê chỗ nào
+🎶 Pre-Chorus
+Ai ngờ bước tới cửa rào
+Về nhà nghe tiếng vợ chào: “Anh ơi!”
+Hào quang bỗng tắt ngang trời
+Thanh long bạch hổ… hóa người rửa mâm
+🎶 Chorus (cao trào vui nhộn)
+Anh hùng nay đứng… bếp trong
+Chảo xoong cơm nước xoay vòng như bay
+Ban ngày múa võ hăng say
+Ban đêm cúi xuống… rửa tay, rửa nồi
+Đời người nghĩ cũng buồn cười
+Trên sàn oai dũng, dưới đời… nấu canh
+Nhưng thôi nghĩ lại cũng đành
+Anh hùng chân chính… phải thành… người ngoan! 😄
+🎶 Verse 2
+Ngày xưa ra đòn như phong
+Song phi cước đá long tong cả phòng
+Bây giờ tay xách bịch bông
+Đi chợ trả giá, trong lòng xót xa
+Đệ tử gọi: “Thầy ơi mà!”
+Ở nhà vợ gọi: “Anh à! Lau sân!”
+Võ công cao đến mười phần
+Không qua nổi ải… rửa chân cho nàng
+🎶 Bridge (hơi chậm lại, hài hước mà ấm áp)
+Nghĩ đi nghĩ lại cho đàng
+Giang hồ chi nữa, gia trang mới bền
+Anh hùng chẳng chỉ ở trên
+Sàn thi đấu, mà ở bên gia đình
+Biết thương, biết nhịn, biết nhìn
+Đó là nội lực… thâm tình cao siêu
+Thắng người đâu có bao nhiêu
+Thắng mình mới thật là điều đáng khen
+🎶 Chorus cuối (vui hơn, có thể tăng tông)
+Anh hùng đâu phải chỉ gân
+Mà còn biết rửa bát, chân không nề hà
+Trên đời ai cũng vậy mà
+Ra ngoài oai dũng, về nhà… dịu êm
+Vào hội thì cứ vào thêm
+Cho vui bằng hữu, khỏi thèm tủi thân
+Nhưng mà nhớ nhé anh hùng
+Giữ cho mái ấm… muôn trùng bình yên!</div>
+            </details>
         </div>
 
         <div class="track">
-            <div class="track-title">35. HẾT TẾT RỒI </div>
+            <div class="track-title">35. HẾT TẾT RỒI</div>
             <audio controls>
                 <source src="35🎵 HẾT TẾT RỒI.mp3" type="audio/mpeg">
             </audio>
+            <details class="lyric-section">
+                <summary>👉 Xem lời bài hát</summary>
+                <div class="lyric-content">ABC</div>
+            </details>
         </div>
 
         <div class="track">
-            <div class="track-title">36. SƯ PHỤ LÀ CẢ BẦU TRỜI </div>
+            <div class="track-title">36. SƯ PHỤ LÀ CẢ BẦU TRỜI</div>
             <audio controls>
                 <source src="36SƯ PHỤ LÀ CẢ BẦU TRỜI.mp3" type="audio/mpeg">
             </audio>
+            <details class="lyric-section">
+                <summary>👉 Xem lời bài hát</summary>
+                <div class="lyric-content">🎵 HẾT TẾT RỒI
+Verse 1
+Sáng nay phố bỗng im hơn
+Bao phong bao lì xì cất vào góc nhỏ
+Bánh chưng xanh đã vơi dần
+Mùi nhang trầm nhạt theo gió xa xa
+Những tiếng cười đêm giao thừa
+Giờ như còn vang trong trí nhớ
+Lịch treo tường lật thêm trang
+Một năm mới bắt đầu rất thật thà
+Pre-Chorus
+Áo mới gấp lại trong tủ
+Pháo hoa còn sáng trong tim
+Tết đi qua nhanh như giấc mộng
+Nhưng yêu thương vẫn còn nguyên
+Chorus
+Hết Tết rồi… ta lại về đời thường thôi
+Dòng người xuôi ngược, nắng lên giữa bầu trời
+Không còn câu chúc rộn ràng khắp nơi
+Chỉ còn ta với những ước mơ chưa nói
+Hết Tết rồi… nhưng lòng không hề vơi
+Vì ta mang theo tiếng cười đầu năm ấy
+Giữa bộn bề lo toan và tháng ngày
+Ta hiểu hạnh phúc là khi được quay về
+Verse 2
+Cây mai vàng thôi rực rỡ
+Cánh đào rơi nhẹ giữa hiên nhà
+Những chuyến xe lại tất bật
+Mang theo bao người đi rất xa
+Có người rời quê lên phố
+Có người trở lại công trường
+Tết như khoảng trời để nhớ
+Để ta mạnh mẽ bước tiếp con đường
+Bridge (ý nghĩa sâu hơn)
+Tết không chỉ là mấy ngày
+Mà là dịp để ta nhìn lại
+Ai còn bên ta hôm nay
+Là điều quý hơn mọi lộc tài
+Nếu mỗi ngày ta sống chậm
+Yêu thương như buổi đầu năm
+Thì đời thường đâu khô khan
+Mà chính là mùa xuân âm thầm
+Final Chorus (nâng cao)
+Hết Tết rồi… ta lại gieo những ước mơ
+Giữa dòng đời vẫn tin vào điều đẹp nhất
+Không cần pháo hoa rực rỡ bất ngờ
+Chỉ cần tim mình luôn ấm
+Hết Tết rồi… ta trưởng thành hơn thôi
+Mang bình yên theo từng bước chân mới
+Xuân có thể qua… nhưng người ơi
+Xuân ở lại… khi ta biết yêu đời</div>
+            </details>
         </div>
+
         <div class="track">
-            <div class="track-title">37. LÊN ĐƯỜNG – CHÍ NGUYỆN NON SÔNG </div>
+            <div class="track-title">37. LÊN ĐƯỜNG – CHÍ NGUYỆN NON SÔNG</div>
             <audio controls>
                 <source src="37LÊN ĐƯỜNG – CHÍ NGUYỆN NON SÔNG .mp3" type="audio/mpeg">
             </audio>
+            <details class="lyric-section">
+                <summary>👉 Xem lời bài hát</summary>
+                <div class="lyric-content">ABC</div>
+            </details>
+        </div>
+
+        <div class="track">
+            <div class="track-title">38. TÂM VÕ NGƯỜI THẦY</div>
+            <audio controls>
+                <source src="38Tâm Võ Người Thầy.mp3" type="audio/mpeg">
+            </audio>
+            <details class="lyric-section">
+                <summary>👉 Xem lời bài hát</summary>
+                <div class="lyric-content">ABC</div>
+            </details>
         </div>
         
     </div>
@@ -424,15 +2354,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
